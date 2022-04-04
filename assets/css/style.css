@@ -7,12 +7,29 @@
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   list-style: none;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #CACACA #545454; 
 }
 
 body {
   background-color: #000;
   font-size: 100%;
   color: #fff;
+}
+
+/* Scrollbar Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #151515;
+  border-radius: 1rem;
+  border: 0.1rem solid #545454;
 }
 
 a {
@@ -604,6 +621,8 @@ a {
   flex-direction: column;
   border-radius: 0.4rem;
   border: 0.1rem solid #545454;
+  height: 20rem;
+  overflow:auto;
 }
 
 .pcard-cover {
@@ -619,12 +638,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  padding: 1rem;
 }
 
 .pcard-technologies {
   font-size: 2.4rem;
-  line-height: 4.5rem;
+  line-height: 4rem;
   background: linear-gradient(#00D1FF, #00FFF0);  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
