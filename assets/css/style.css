@@ -86,9 +86,6 @@ a {
   margin-top: -0.3rem;
 }
 
-
-
-/* Toggle Menu */
 #toggle-nav {
   display: flex;
   flex-flow: row wrap;
@@ -100,15 +97,23 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  width: 4.5rem;
   height: 100%;
   visibility: hidden;
+}
+
+
+#toggle-menu:hover{
+  background-color: #000;
+  width: 10rem;
 }
 
 #toggle-nav.active #toggle-menu {
   visibility: visible;
 }
 
-#toggle-menu #toggle-menu-text:hover{
+#toggle-nav.active #toggle-menu:hover .toggle-menu-text {
+  width: 10rem;
   visibility: visible;
 }
 
@@ -120,7 +125,7 @@ a {
   font-size: 1.5rem;
   -webkit-text-stroke-width: 0.05rem;
   -webkit-text-stroke-color: #CACACA;
-  color: transparent; 
+  color: transparent;
 }
 
 .toggle-menu-icons:hover{
@@ -132,7 +137,7 @@ a {
 }
 
 /* Toggle Menu - Text */ 
-#toggle-menu-text{
+.toggle-menu-text{
   display: block;
   position: absolute;
   width: 0;
@@ -141,32 +146,29 @@ a {
   margin: -3.5rem 5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #000;
   white-space: nowrap;
-  background: linear-gradient(to left, #00D1FF, #00FFF0); 
+  color: #CACACA;
   visibility: hidden;
 }
 
-
-#toggle-menu-text:hover{
+.toggle-menu-text:hover{
+  width: 100%;
+  color: #000;
   background: linear-gradient(to left, #00D1FF, #00FFF0); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
   visibility: visible;
 }
 
-/* Dark Light Button 
+/* Dark Light Button */
 .darklight-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 4.5rem;
-  height: 6rem;
+  padding: 2rem;
   color: #151515;
-  margin-bottom:1.5rem;
+  position: absolute;
+  bottom: 0px;
 }
 
 .darklight-button {
@@ -186,8 +188,6 @@ a {
   font-size: 1.7rem;
   color: #00FFF0;
 }
-
-*/
 
 
 /* Introduction */
@@ -426,8 +426,8 @@ a {
 }
 
 .about-avatar {
-  width: 18.5rem;
-  height: 18.5rem;
+  width: 17rem;
+  height: 17rem;
   border-radius: 65%;
   border: 0.1rem solid #545454;
   object-fit: cover;
