@@ -586,34 +586,39 @@ a {
 .projects-gallery {
   display: flex;
   flex-direction: column;
+  margin: 1rem 0;
 }
 
-.projects-list > li{
-  margin: 2rem 0 2rem;
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50%);
+  margin-left: -1rem;
+}
+
+.projects-list > li {
+  padding: 1rem;
 }
 
 .projects-card {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   border-radius: 0.4rem;
   border: 0.1rem solid #545454;
 }
 
 .pcard-cover {
-  max-width: 50%;
+  width: 100%;
 }
 
 .pcard-cover-img {
   width: 100%;
-  height: 100%;
-  border-radius: 0.3rem 0 0 0.3rem;
+  border-radius: 0.3rem 0.3rem 0 0;
 }
 
 .pcard-description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 50%;
   padding: 1.25rem 1.25rem 1.25rem 1.5rem;
 }
 
