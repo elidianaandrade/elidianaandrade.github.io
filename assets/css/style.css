@@ -17,9 +17,13 @@ body {
   color: #fff;
 }
 
-/* Scrollbar Chrome, Edge, Safari */
+a {
+  color:#CACACA;
+}
+
+/* Scrollbar Chrome, Edge, Safari Style */
 body::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 0.45rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -27,17 +31,13 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #151515;
-  border-radius: 1rem;
-  border: 0.1rem solid #545454;
+  background-color: #545454;
 }
+/* Scrollbar End */
 
-a {
-  color:#CACACA;
-}
 
-/* Menu Principal */
-#menubar {
+/* Menu Principal Style */
+#toggle-bar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +46,7 @@ a {
   position: fixed;
 }
 
-/* Toggle Button */
+/* Toggle Menu - Button */
 #toggle-button {
   display: flex;
   flex-direction: row;
@@ -57,6 +57,7 @@ a {
   background: linear-gradient(to right, #00D1FF, #00FFF0);
   border: none;
   cursor: pointer;
+  z-index: 10000;
 }
 
 #toggle-btn-icon {
@@ -90,7 +91,7 @@ a {
 }
 
 #toggle-nav.active #toggle-btn-icon {
-  border-top: transparent;
+  border-top: transparent; /* #toggle-btn-icon */
 }
 
 #toggle-nav.active #toggle-btn-icon::before {
@@ -103,6 +104,7 @@ a {
   margin-top: -0.3rem;
 }
 
+/* Toggle Menu - Nav */
 #toggle-nav {
   display: flex;
   flex-flow: row wrap;
@@ -119,21 +121,19 @@ a {
   visibility: hidden;
 }
 
-
-#toggle-menu:hover{
-  background-color: #000;
-  width: 10rem;
-}
-
 #toggle-nav.active #toggle-menu {
+  animation: down-menu 1s;
   visibility: visible;
 }
 
-#toggle-nav.active #toggle-menu:hover .toggle-menu-text {
-  width: 10rem;
-  visibility: visible;
+@keyframes down-menu {
+  from {
+    transform: translateY(-30rem);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
-
 
 /* Toggle Menu - Icons */ 
 .toggle-menu-icons{
@@ -153,25 +153,27 @@ a {
   border-image: linear-gradient(to top, #00FFF0, #00D1FF) 1;
 }
 
+
 /* Toggle Menu - Text */ 
 .toggle-menu-text{
   display: block;
   position: absolute;
   width: 0;
   padding: 1rem;
-  transition: .6s;
-  margin: -3.5rem 5rem;
+  margin: -3.8rem 4rem;
   font-size: 1.5rem;
   font-weight: 700;
   white-space: nowrap;
-  color: #CACACA;
+  background: linear-gradient(to left, #00D1FF, #00FFF0); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   visibility: hidden;
 }
 
-.toggle-menu-text:hover{
-  width: 100%;
-  color: #000;
-  background: linear-gradient(to left, #00D1FF, #00FFF0); 
+#toggle-nav.active #toggle-menu li:hover .toggle-menu-text { /* icon hover text visible */
+  width: 10rem;
   visibility: visible;
 }
 
@@ -205,9 +207,10 @@ a {
   font-size: 1.7rem;
   color: #00FFF0;
 }
+/* Menu Principal End */
 
 
-/* Introduction */
+/* Introduction Style */
 .section-introduction {
   display: flex;
   flex-flow: row wrap;
@@ -339,9 +342,10 @@ a {
 .contact-icons > .fa-location-dot {
   margin-left: 0.25rem;
 }
+/* Introduction End */
 
 
-/* Section Default */
+/* Section Default Style */
 .section-icons {
   font-size: 2rem;
   -webkit-text-stroke-width: 0.05rem;
@@ -380,9 +384,10 @@ a {
   background-clip: text;
   color: transparent; 
 }
+/* Section Default End */
 
 
-/* About me */
+/* About me Style */
 .section-about {
   display: flex;
   flex-flow: row wrap;
@@ -479,9 +484,10 @@ a {
   margin-right: 1rem;
   text-align: center;
 }
+/* About me End */
 
 
-/* Education */
+/* Education Style */
 .section-education {
   display: flex;
   flex-flow: row wrap;
@@ -498,10 +504,9 @@ a {
   margin-right: 5rem;
 }
 
-.education-list > li {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5rem;
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100%);
 }
 
 .education-card {
@@ -513,6 +518,7 @@ a {
   border-left: 0.75rem solid;
   border-image: linear-gradient(#00D1FF, #00FFF0) 27; 
   padding: 1rem 1rem 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .ecard-content1 {
@@ -549,8 +555,6 @@ a {
   margin-right: 0.5rem;
 }
 
-
-
 /* Education Content 2 */
 .education-content2 {
   display: flex;
@@ -581,9 +585,10 @@ a {
   margin-left: 1rem;
   user-select: none;
 }
+/* Education End */
 
 
-/* Projects */
+/* Projects Style */
 .section-projects {
   display: flex;
   flex-flow: row wrap;
@@ -608,7 +613,9 @@ a {
 
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50%);
+  flex-wrap:wrap;
+  grid-auto-flow: column dense;
+  /*grid-template-columns: repeat(auto-fill, 50%);*/
   margin-left: -1rem;
 }
 
@@ -621,8 +628,17 @@ a {
   flex-direction: column;
   border-radius: 0.4rem;
   border: 0.1rem solid #545454;
-  height: 20rem;
-  overflow:auto;
+ /* height: 20rem;*/
+
+}
+
+.projects-card:hover {
+box-shadow:
+  0.1rem 0.1rem #00FFF0,
+  0.2rem 0.2rem #00FFF0,
+  0.3rem 0.3rem #00FFF0;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
 }
 
 .pcard-cover {
@@ -651,11 +667,6 @@ a {
   color: transparent; 
 }
 
-.pcard-footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
 
 .progress-container {
   display: flex;
@@ -666,18 +677,21 @@ a {
 
 .progress-bar {
   width: 100%;
-	height: 0.5rem;
+	height: 0.7rem;
   background: #545454; 
 	border-radius: 1rem;
+  box-shadow: inset 0 0 0.1rem #000;
 }
 
 .progress-bar::after {
   content: '';
   display: block;
   width: 50%;
-	height: 0.5rem;
+	height: 0.4rem;
   background: linear-gradient(to right, #00D1FF, #00FFF0); 
 	border-radius: 1rem;
+  margin: 0.15rem 0 0.15rem 0.15rem;
+  box-shadow: 0 0 1em #000;
 }
 
 .progress-description {
@@ -686,7 +700,7 @@ a {
   margin-left: 0.5rem;
 }
 
-.pcard-open {
+.pcard-btn {
   font-size: 2rem;
   background: linear-gradient(#00D1FF, #00FFF0);  
   -webkit-background-clip: text;
@@ -724,6 +738,12 @@ a {
   transition: .4s;
 }
 
+.pcard-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 /* Projects Content 2 */
 .projects-content2 {
   display: flex;
@@ -731,9 +751,10 @@ a {
   align-items: center;
   justify-content: right;
 }
+/* Projects End */
 
 
-/* Footer */
+/* Footer Style */
 .section-footer {
   display: flex;
   flex-direction: column;
@@ -746,5 +767,4 @@ a {
   font-size: 1rem;
   color: #CACACA;
 }
-
-
+/* Footer End */
