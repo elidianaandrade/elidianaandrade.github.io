@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-text-stroke-width: 0.05rem;
   -webkit-text-stroke-color: #00FFF0;
   color: transparent;
-  border-left: 0.25rem solid;
+  border-left: 0.2rem solid;
   border-image: linear-gradient(to top, #00FFF0, #00D1FF) 1;
 }
 
@@ -160,20 +160,19 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   width: 0;
   padding: 1rem;
-  margin: -3.8rem 4rem;
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: -3.5rem 4.5rem;
+  font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;
-  background: linear-gradient(to left, #00D1FF, #00FFF0); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: #00FFF0;
+  background: #000; 
+  opacity: 85%;
   visibility: hidden;
 }
 
 #toggle-nav.active #toggle-menu li:hover .toggle-menu-text { /* icon hover text visible */
-  width: 10rem;
+  width: 7.5rem;
   visibility: visible;
 }
 
