@@ -221,7 +221,8 @@ body::-webkit-scrollbar-thumb {
   left: 0.2rem;
   bottom: 0.2rem;
   border-radius: 1rem;
-  box-shadow: inset 0.8rem 0 0.4rem -0.5rem #00d1ff, inset 1.2rem 0 0 -0.6rem #00fff0 /* fill, rotate, fade, fill */ 
+  box-shadow: inset 0.8rem 0 0.4rem -0.5rem #00d1ff, inset 1.2rem 0 0 -0.6rem #00fff0; /* fill, rotate, fade, fill */ 
+  transition: .4s;
 }
 
 input:checked + .slider {
