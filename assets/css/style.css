@@ -45,7 +45,6 @@ body::-webkit-scrollbar-thumb {
   width: 4.5rem;
   height: 100%;
   position: fixed;
-  overflow-x: hidden;
 }
 
 /* Toggle Menu - Button */
@@ -661,17 +660,8 @@ input:checked + .slider:before {
   flex-direction: column;
   border-radius: 0.4rem;
   border: 0.1rem solid #545454;
+  overflow: hidden;
  /* height: 20rem;*/
-
-}
-
-.projects-card:hover {
-box-shadow:
-  0.1rem 0.1rem #00FFF0,
-  0.2rem 0.2rem #00FFF0,
-  0.3rem 0.3rem #00FFF0;
-  -webkit-transform: translateX(-3px);
-  transform: translateX(-3px);
 }
 
 .pcard-cover {
@@ -742,6 +732,13 @@ box-shadow:
   color: transparent;  
   text-align: right;
   margin-left: 1rem;
+  transition: .4s;
+  transform: scale(1);
+}
+
+.pcard-btn:hover {
+  transition: .4s;
+  transform: scale(1.2);
 }
 
 .projects-footer {
@@ -799,5 +796,31 @@ box-shadow:
 .footer-description {
   font-size: 1rem;
   color: #CACACA;
+}
+
+.up-container {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  top: 90%;
+  bottom: 5%;
+  left: 96%;
+  z-index: -10000;
+}
+
+.up {
+  font-size: 2rem;
+  color: #545454;
+  transition: .4s;
+}
+
+.up:hover {
+  font-size: 2rem;
+  background: linear-gradient(#00D1FF, #00FFF0);  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 /* FOOTER END */
