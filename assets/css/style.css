@@ -14,14 +14,14 @@
 body {
   background-color: #000;
   font-size: 100%;
-  color: #fff;
+  color: #FAFAFA;
 }
 
 a {
   color:#CACACA;
 }
 
-/* Scrollbar Chrome, Edge, Safari Style */
+/* SCROLLBAR STYLE (Chrome, Edge, Safari Style) */
 body::-webkit-scrollbar {
   width: 0.45rem;
 }
@@ -32,11 +32,12 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: #545454;
+  border-radius: 1rem;
 }
-/* Scrollbar End */
+/* SCROLLBAR END */
 
 
-/* Menu Principal Style */
+/* TOGGLE MENU STYLE */
 #toggle-bar {
   display: flex;
   flex-direction: column;
@@ -44,6 +45,7 @@ body::-webkit-scrollbar-thumb {
   width: 4.5rem;
   height: 100%;
   position: fixed;
+  overflow-x: hidden;
 }
 
 /* Toggle Menu - Button */
@@ -153,12 +155,10 @@ body::-webkit-scrollbar-thumb {
   border-image: linear-gradient(to top, #00FFF0, #00D1FF) 1;
 }
 
-
 /* Toggle Menu - Text */ 
 .toggle-menu-text{
   display: block;
   position: absolute;
-  width: 0;
   padding: 1rem;
   text-transform: uppercase;
   margin: -3.5rem 4.5rem;
@@ -175,41 +175,70 @@ body::-webkit-scrollbar-thumb {
   width: 7.5rem;
   visibility: visible;
 }
+/* TOGGLE MENU END */
 
-/* Dark Light Button */
-.darklight-container {
+
+
+/* SWITCH STYLE */
+.switch-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 4.5rem;
-  padding: 2rem;
-  color: #151515;
+  padding: 1.2rem 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  width: 2rem;
+  height: 4rem;
+}
+
+.switch input {
+  appearance: none;
+}
+
+.slider {
   position: absolute;
-  bottom: 0px;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  cursor: pointer;
+  background-color: #1b1b1b;
+  border: 0.06rem solid #151515;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0.125rem #545454;
+  transition: .4s;
 }
 
-.darklight-button {
-  width: 2.25rem;
-  height: 5rem;
-  border-radius: 10rem;
-  background-color: transparent;
-  border: 0.1rem solid #CACACA;
+.slider::before{
+  position: absolute;
+  content: " ";
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+  border-radius: 1rem;
+  box-shadow: inset 0.8rem 0 0.4rem -0.5rem #00d1ff, inset 1.2rem 0 0 -0.6rem #00fff0 /* fill, rotate, fade, fill */ 
 }
 
-.light-icon {
-  font-size: 1.7rem;
-  color: #CACACA;
+input:checked + .slider {
+  background-color: #FAFAFA;
+  border: 0.06rem solid #151515;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0.125rem #545454;
 }
 
-.dark-icon {
-  font-size: 1.7rem;
-  color: #00FFF0;
+input:checked + .slider:before {
+  transform: translateY(-2rem);
+  box-shadow: inset 1rem 1rem 0.4rem -0.5rem #00d1ff, inset 1rem 2rem 0.3rem -0.6rem #00fff0;
 }
-/* Menu Principal End */
+/* SWITCH END */
 
 
-/* Introduction Style */
+/* INTRODUCTION STYLE */
 .section-introduction {
   display: flex;
   flex-flow: row wrap;
@@ -227,14 +256,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .introduction-category {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
   background: linear-gradient(to right, #00D1FF, #00FFF0); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent; 
-  text-transform: lowercase;
 }
 
 .introduction-title {
@@ -264,8 +294,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button-gradient {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
   background: linear-gradient(to right, #00D1FF, #00FFF0); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -341,10 +373,10 @@ body::-webkit-scrollbar-thumb {
 .contact-icons > .fa-location-dot {
   margin-left: 0.25rem;
 }
-/* Introduction End */
+/* INTRODUCTION END */
 
 
-/* Section Default Style */
+/* SECTION DEFAULT STYLE */
 .section-icons {
   font-size: 2rem;
   -webkit-text-stroke-width: 0.05rem;
@@ -383,10 +415,10 @@ body::-webkit-scrollbar-thumb {
   background-clip: text;
   color: transparent; 
 }
-/* Section Default End */
+/* SECTION DEFAULT END */
 
 
-/* About me Style */
+/* ABOUT ME STYLE */
 .section-about {
   display: flex;
   flex-flow: row wrap;
@@ -483,10 +515,10 @@ body::-webkit-scrollbar-thumb {
   margin-right: 1rem;
   text-align: center;
 }
-/* About me End */
+/* ABOUT ME END */
 
 
-/* Education Style */
+/* EDUCATION STYLE */
 .section-education {
   display: flex;
   flex-flow: row wrap;
@@ -584,10 +616,10 @@ body::-webkit-scrollbar-thumb {
   margin-left: 1rem;
   user-select: none;
 }
-/* Education End */
+/* EDUCATION END */
 
 
-/* Projects Style */
+/* PROJECTS STYLE */
 .section-projects {
   display: flex;
   flex-flow: row wrap;
@@ -679,7 +711,7 @@ box-shadow:
 	height: 0.7rem;
   background: #545454; 
 	border-radius: 1rem;
-  box-shadow: inset 0 0 0.1rem #000;
+  box-shadow: inset 0 0 0.1rem #151515;
 }
 
 .progress-bar::after {
@@ -690,7 +722,7 @@ box-shadow:
   background: linear-gradient(to right, #00D1FF, #00FFF0); 
 	border-radius: 1rem;
   margin: 0.15rem 0 0.15rem 0.15rem;
-  box-shadow: 0 0 1em #000;
+  box-shadow: 0 0 1em #151515;
 }
 
 .progress-description {
@@ -750,10 +782,10 @@ box-shadow:
   align-items: center;
   justify-content: right;
 }
-/* Projects End */
+/* PROJECTS END */
 
 
-/* Footer Style */
+/* FOOTER STYLE */
 .section-footer {
   display: flex;
   flex-direction: column;
@@ -766,4 +798,4 @@ box-shadow:
   font-size: 1rem;
   color: #CACACA;
 }
-/* Footer End */
+/* FOOTER END */
