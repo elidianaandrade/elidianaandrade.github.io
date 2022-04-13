@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root{
+  --blue: #00D1FF;
+  --green: #00FFF0;
+  --black: #000000;
+  --grayd: #545454;
+  --grayl: #CACACA;
+  --white: #FAFAFA;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,13 +21,13 @@
 }
 
 body {
-  background-color: #000;
+  background: var(--black);
   font-size: 100%;
-  color: #FAFAFA;
+  color: var(--white);
 }
 
 a {
-  color:#CACACA;
+  color: var(--grayl);
 }
 
 /* SCROLLBAR STYLE (Chrome, Edge, Safari Style) */
@@ -55,7 +64,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   width: 4.5rem;
   height: 4.5rem;
-  background: linear-gradient(to right, #00D1FF, #00FFF0);
+  background: linear-gradient(to right, var(--blue), var(--green));
   border: none;
   cursor: pointer;
   z-index: 10000;
@@ -66,7 +75,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   width: 2.25rem;
   height: 0.25rem;
-  color: #000;
+  color: var(--black);
 }
 
 #toggle-btn-icon::before {
@@ -142,16 +151,16 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem;
   font-size: 1.5rem;
   -webkit-text-stroke-width: 0.05rem;
-  -webkit-text-stroke-color: #CACACA;
+  -webkit-text-stroke-color: var(--grayl);
   color: transparent;
 }
 
 .toggle-menu-icons:hover{
   -webkit-text-stroke-width: 0.05rem;
-  -webkit-text-stroke-color: #00FFF0;
+  -webkit-text-stroke-color: var(--green);
   color: transparent;
   border-left: 0.2rem solid;
-  border-image: linear-gradient(to top, #00FFF0, #00D1FF) 1;
+  border-image: linear-gradient(to top, var(--green), var(--blue)) 1;
 }
 
 /* Toggle Menu - Text */ 
@@ -159,19 +168,20 @@ body::-webkit-scrollbar-thumb {
   display: block;
   position: absolute;
   padding: 1rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   margin: -3.5rem 4.5rem;
   font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;
-  color: #00FFF0;
-  background: #000; 
+  color: var(--green);
+  background: var(--black); 
   opacity: 85%;
   visibility: hidden;
 }
 
 #toggle-nav.active #toggle-menu li:hover .toggle-menu-text { /* icon hover text visible */
-  width: 7.5rem;
+  width: 8.5rem;
   visibility: visible;
 }
 /* TOGGLE MENU END */
@@ -186,19 +196,19 @@ body::-webkit-scrollbar-thumb {
   padding: 1.2rem 1rem;
 }
 
-.switch {
+.switch { /* switch button box */
   position: relative;
   display: inline-block;
-  font-size: 1rem;
   width: 2rem;
   height: 4rem;
 }
 
-.switch input {
+.switch input { /* hidden default */
   appearance: none;
 }
 
-.slider {
+/* Dark Mode */
+.slider { /* dark mode */
   position: absolute;
   top: 0; 
   right: 0; 
@@ -212,7 +222,7 @@ body::-webkit-scrollbar-thumb {
   transition: .4s;
 }
 
-.slider::before{
+.slider::before{  /* moon icon */
   position: absolute;
   content: " ";
   width: 1.5rem;
@@ -220,21 +230,23 @@ body::-webkit-scrollbar-thumb {
   left: 0.2rem;
   bottom: 0.2rem;
   border-radius: 1rem;
-  box-shadow: inset 0.8rem -0.5rem 0.3rem -0.5rem #00d1ff /* fill, rotate, fade, fill */ , 
-              inset 0.5rem -0.3rem 0 0.1rem #00fff0 /* fill, rotate, fade, right inner curve */; 
+  box-shadow: inset 0.8rem -0.5rem 0.3rem -0.5rem var(--blue) /* fill, rotate, fade, fill */ , 
+              inset 0.5rem -0.3rem 0 0.1rem var(--green) /* fill, rotate, fade, right inner curve */; 
   transition: .4s;
 }
 
-input:checked + .slider {
+/* Light Mode */
+input:checked + .slider { /* light mode */
   background-color: #FAFAFA;
-  border: 0.06rem solid #151515;
+  border: 0.02rem solid #CACACA;
   border-radius: 1rem;
   box-shadow: inset 0 0 0.125rem #545454;
 }
 
-input:checked + .slider:before {
+input:checked + .slider:before { /* sun icon */
   transform: translateY(-2rem);
-  box-shadow: inset 1rem 1rem 0.4rem -0.5rem #00d1ff, inset 1rem 2rem 0.3rem -0.6rem #00fff0;
+  box-shadow: inset 1rem 1rem 0.4rem -0.5rem var(--blue), 
+              inset 1rem 2rem 0.3rem -0.6rem var(--green);
 }
 /* SWITCH END */
 
@@ -261,7 +273,7 @@ input:checked + .slider:before {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
-  background: linear-gradient(to right, #00D1FF, #00FFF0); 
+  background: linear-gradient(to right, var(--blue), var(--green)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -272,12 +284,12 @@ input:checked + .slider:before {
   font-size: 4.2rem;
   font-weight: 700;
   margin: 1.5rem 0 1.5rem;
-  color: #F5F5F5; 
+  color: var(--white); 
 }
 
 .introduction-description {
   font-size: 1.4rem;
-  color: #CACACA; 
+  color: var(--grayl); 
   text-align: justify;
 }
 
@@ -286,7 +298,7 @@ input:checked + .slider:before {
   flex-direction: row;
   font-size: 3rem;
   letter-spacing: 1.25rem;
-  background: linear-gradient(#00D1FF, #00FFF0);  
+  background: linear-gradient(var(--blue), var(--green));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -800,13 +812,10 @@ input:checked + .slider:before {
 
 .up-container {
   position: fixed;
-  width: 2rem;
-  height: 2rem;
   text-align: center;
   top: 90%;
   bottom: 5%;
   left: 96%;
-  z-index: -10000;
 }
 
 .up {

@@ -1,0 +1,75 @@
+:root{
+    --blue: #00D1FF;
+    --green: #00FFF0;
+    --black: #000000;
+    --grayd: #545454;
+    --grayl: #CACACA;
+    --white: #FAFAFA;
+  }
+
+
+body.light-mode {
+    background: var(--white);
+    color: var(--black);
+}
+
+a.light-mode {
+    color: var(--grayd);
+}
+
+h2.light-mode {
+    color: var(--black);
+}
+  
+/* SCROLLBAR STYLE (Chrome, Edge, Safari Style) */
+body.light-mode::-webkit-scrollbar-track {
+    background: #FAFAFA;
+}
+  
+body.light-mode::-webkit-scrollbar-thumb {
+    background-color: #CACACA;
+    border-radius: 1rem;
+}
+/* SCROLLBAR END */
+
+
+/* SECTION DEFAULT STYLE */
+.section-title.light-mode {
+    color: var(--black);
+}
+
+.section-description.light-mode {
+    color: var(--grayd); 
+}
+
+/* SECTION DEFAULT END */
+
+
+/* TOGGLE MENU STYLE */
+/* Toggle Menu - Button */
+#toggle-btn-icon.light-mode {
+    color: var(--white);
+}
+
+/* Toggle Menu - Icons */ 
+.toggle-menu-icons.light-mode {
+    -webkit-text-stroke-color: var(--grayd);
+}
+
+/* Toggle Menu - Text */ 
+.toggle-menu-text.light-mode {
+    background: var(--white); 
+}
+/* TOGGLE MENU END */
+
+
+/* INTRODUCTION STYLE */
+.introduction-title.light-mode {
+    color: var(--black); 
+}
+
+.introduction-description.light-mode {
+    color: var(--grayd); 
+}
+/* INTRODUCTION END */
+
