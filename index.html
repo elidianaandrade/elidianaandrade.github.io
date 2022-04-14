@@ -54,6 +54,14 @@
               <div class="toggle-menu-text">Projects</div>
             </a>
           </li>
+          <li>
+            <a href="#contact">
+              <div class="toggle-menu-icons">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="toggle-menu-text">Contact</div>
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="switch-container">
@@ -66,7 +74,7 @@
   </header>
 
   <main>
-    <!-- Introducton --> 
+    <!-- SECTION INTRODUCTION --> 
     <section id="home" class="section-introduction">
       <!-- Introducton Content 1 --> 
       <div class="introduction-content1">
@@ -120,7 +128,7 @@
     </section>
   </main>
 
-  <!-- About me --> 
+  <!-- SECTION ABOUT ME --> 
   <section id="about" class="section-about">
     <!-- About Content 1 -->
     <div class="about-content1">
@@ -208,7 +216,7 @@
     </div>
   </section>
 
-  <!-- Education --> 
+  <!-- SECTION EDUCATION --> 
   <section id="education" class="section-education">
     <!-- Education Content 1 -->
     <div class="education-content1">
@@ -326,7 +334,7 @@
     </div>
   </section>
 
-  <!-- Projects --> 
+  <!-- SECTION PROJECTS --> 
   <section id="projects" class="section-projects">
     <!-- Projects Content 1 -->
     <div class="projects-content1">
@@ -339,60 +347,82 @@
       </p>
       <!-- Projects Galerry -->
       <div class="projects-gallery">
-        <ul class="projects-list">   
-          <li class="project1">
+        <ul class="projects-list">  
+          <!-- Project 01 --> 
+          <li id="project01">
             <div class ="projects-card">
+              <!-- Project Cover -->
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" src="assets/img/projects-covers/cover-screen-elicosmaker.png" alt="Cover Project Eli Cosmaker">
               </div>
+              <!-- Project Description -->
               <div class ="pcard-description">
-                <span class="section-category">Web development</span>
-                <h3 class="section-subtitle">Landing Page</h3>
-                <p class="section-description">Portfolio Elidiana Andrade</p>
-                <div class="pcard-technologies">
-                  <i class="fa-brands fa-html5"></i>
-                  <i class="fa-brands fa-css3-alt"></i>
-                  <i class="fa-brands fa-js-square"></i>
+                <h3 class="section-subtitle">ELI COSMAKER</h3>
+                <p class="section-description">
+                  Prop Making Portfolio
+                </p>
+                <div class="pcard-tags-container">
+                  <div class="pcard-tags">HTML5</div>
+                  <div class="pcard-tags">CSS3</div>
+                  <div class="pcard-tags">JavaScript</div>
                 </div>
                 <div class="pcard-footer">
                   <div class="progress-container">
-                    <div class="progress-bar"></div>
-                    <span class="progress-description">50%</span>
+                    <progress value="100" max="100" data-content="100%"></progress>
                   </div>
-                  <div class="pcard-btn" >
-                    <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                  <div class="projects-btn-container">
+                    <div class="projects-btn" >
+                      <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                    <div class="projects-btn" >
+                      <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </div>
                   </div>
-              </div>
-            </div>
+                </div>
+            </div>   
           </li>
-          <li class="project2">
+           <!-- Project 02 --> 
+           <li id="project02">
             <div class ="projects-card">
+              <!-- Project Cover -->
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" src="assets/img/projects-covers/cover-screen-archstil.png" alt="Cover Project ArchStil">
               </div>
+              <!-- Project Description -->
               <div class ="pcard-description">
-                <span class="section-category">Web development</span>
-                <h3 class="section-subtitle">ArchStil</h3>
-                <p class="section-description">Recreating Netflix's initial interface, where I bring my version about Architectural Styles.</p>
-                <div class="pcard-technologies">
-                  <i class="fa-solid fa-database"></i>
+                <h3 class="section-subtitle">ARCHSTIL</h3>
+                <p class="section-description">
+                  Netflix's initial interface, version about Architectural Styles.
+                </p>
+                <div class="pcard-tags-container">
+                  <div class="pcard-tags">HTML5</div>
+                  <div class="pcard-tags">CSS3</div>
+                  <div class="pcard-tags">JavaScript</div>
                 </div>
                 <div class="pcard-footer">
                   <div class="progress-container">
-                    <div class="progress-bar"></div>
-                    <span class="progress-description">50%</span>
+                    <progress value="50" max="100" data-content="50%"></progress>
                   </div>
-                  <div class="pcard-btn" >
-                    <a href="https://elidianaandrade.github.io/archstil/" target="_blank">
-                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                  <div class="projects-btn-container">
+                    <div class="projects-btn" >
+                      <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                    <div class="projects-btn" >
+                      <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </li>
+            </div>   
+          </li>         
+
         </ul>
       </div>
       <div class="projects-footer">
@@ -406,7 +436,7 @@
     </div>
   </section>
 
-  <!-- Footer --> 
+  <!-- FOOTER --> 
   <footer class="section-footer">
     <nav>
       <ul class="menu-social-list">
