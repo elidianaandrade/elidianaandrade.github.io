@@ -4,7 +4,7 @@ function toggleMenu() {
     toggleNav.classList.toggle('active');
 }
 
-const toggleButton = document.getElementById('toggle-button');
+const toggleButton = document.getElementById('toggle-btn');
 
 toggleButton.addEventListener('click', toggleMenu);
 /* TOGGLE MENU END */
@@ -17,18 +17,17 @@ function changeMode() {
  
 function changeClasses() {
     body.classList.toggle(lightModeClass);
-    /* Light Text */
-    introductionTitle.classList.toggle(lightModeClass);
-    introductionDescription.classList.toggle(lightModeClass);
+    introTitle.classList.toggle(lightModeClass);
+    introDescription.classList.toggle(lightModeClass);
 }
 
 const lightModeClass = 'light-mode';
-const button = document.getElementById('mode-selector');
 const body = document.getElementsByTagName('body')[0];
-/* Light Text */
-const introductionTitle = document.getElementsByClassName('introduction-title')[0];
-const introductionDescription = document.getElementsByClassName('introduction-description')[0];
+const introTitle = document.getElementsByClassName('intro-title')[0];
+const introDescription = document.getElementsByClassName('intro-description')[0];
 
-button.addEventListener('click', changeMode);
+const lightButton = document.getElementById('mode-selector');
+
+lightButton.addEventListener('click', changeMode);
 /* LIGHT END */
 

@@ -1,16 +1,18 @@
 :root{
     --blue: #00D1FF;
     --green: #00FFF0;
-    --black: #000000;
+    --black: #1B1C1E;
     --grayd: #545454;
     --grayl: #CACACA;
     --white: #FAFAFA;
+    --light: #F8F9FA;
+    --dark:  #1B1C1E;
   }
 
 
 body.light-mode {
-    background: var(--white);
-    color: var(--black);
+    background: var(--light);
+    color: var(--grayd); /* paragraph text */
 }
 
 a.light-mode {
@@ -23,11 +25,11 @@ h2.light-mode {
   
 /* SCROLLBAR STYLE (Chrome, Edge, Safari Style) */
 body.light-mode::-webkit-scrollbar-track {
-    background: #FAFAFA;
+    background: var(--light);
 }
   
 body.light-mode::-webkit-scrollbar-thumb {
-    background-color: #CACACA;
+    background-color: var(--grayl);
     border-radius: 1rem;
 }
 /* SCROLLBAR END */
@@ -37,26 +39,18 @@ body.light-mode::-webkit-scrollbar-thumb {
 .section-title.light-mode {
     color: var(--black);
 }
-
-.section-description.light-mode {
-    color: var(--grayd); 
-}
-
 /* SECTION DEFAULT END */
 
 
 /* TOGGLE MENU STYLE */
-/* Toggle Menu - Button */
 #toggle-btn-icon.light-mode {
     color: var(--white);
 }
 
-/* Toggle Menu - Icons */ 
 .toggle-menu-icons.light-mode {
     -webkit-text-stroke-color: var(--grayd);
 }
 
-/* Toggle Menu - Text */ 
 .toggle-menu-text.light-mode {
     background: var(--white); 
 }
@@ -64,12 +58,17 @@ body.light-mode::-webkit-scrollbar-thumb {
 
 
 /* INTRODUCTION STYLE */
-.introduction-title.light-mode {
+.intro-title.light-mode {
     color: var(--black); 
 }
 
-.introduction-description.light-mode {
+.intro-description.light-mode {
     color: var(--grayd); 
 }
 /* INTRODUCTION END */
 
+/* PROJECTS STYLE */
+  .projects-card.light-mode {
+    border: 0.1rem solid var(--grayl);
+  }
+/* PROJECTS STYLE END */

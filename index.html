@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name ="description" content="Portfólio Análise e Desenvolvimento de Sistemas">
+  <meta name ="description" content="Web Developer Portfolio">
   <title>Elidiana Andrade</title>
   <link rel="stylesheet" type="text/css" href="assets/style/main.css"/>
   <link rel="stylesheet" href="assets/style/light-mode.css">
@@ -17,7 +17,7 @@
     <div id="toggle-bar">
       <!-- Toggle Nav -->
       <nav id="toggle-nav">
-        <button id="toggle-button">
+        <button id="toggle-btn">
             <span id="toggle-btn-icon"></span>
         </button>
         <!-- Toggle Menu --> 
@@ -75,12 +75,11 @@
 
   <main>
     <!-- SECTION INTRODUCTION --> 
-    <section id="home" class="section-introduction">
-      <!-- Introducton Content 1 --> 
-      <div class="introduction-content1">
-        <span class="introduction-category">Web Developer</span>
-        <h1 class="introduction-title">Elidiana Andrade</h1>
-        <p class="introduction-description">
+    <section id="home" class="section-intro">
+      <div class="intro-content1">
+        <span class="intro-category">Web Developer</span>
+        <h1 class="intro-title">I'm Elidiana Andrade,</h1>
+        <p class="intro-description">
           Objective to work in the area of Information and Communication Technology (ICT) in Web Development or Data Management. Basic knowledge of  relational database management system, logic and programming languages, markup and styling: SQL, JavaScript, HTML, and CSS.
         </p>
         <ul class="technologies-list">
@@ -91,11 +90,16 @@
           <li><i class="fa-brands fa-html5"></i></li>
           <li><i class="fa-brands fa-css3-alt"></i></li>
         </ul>
-        <a href="#about"><button class="button-gradient">See more</button></a>
+        <div class="intro-btns">
+          <a href="#projects">
+            <button class="btn-gradient">
+              View Portfolio
+            </button>
+          </a>
+        </div>
       </div>
-      <!-- Introducton Content 2 --> 
-      <div class="introduction-content2">
-        <img class="introduction-logo" src="assets/img/logo-elidianaandrade.png" alt="Logo Elidiana Andrade">
+      <div class="intro-content2">
+        <img class="intro-logo" src="assets/img/logo-elidianaandrade.png" alt="Logo Elidiana Andrade">
         <nav>
           <ul class="menu-social-list">
             <li class="menu-social-items">
@@ -359,31 +363,31 @@
               <div class ="pcard-description">
                 <h3 class="section-subtitle">ELI COSMAKER</h3>
                 <p class="section-description">
-                  Prop Making Portfolio
+                  Prop Making Portfolio.
                 </p>
                 <div class="pcard-tags-container">
                   <div class="pcard-tags">HTML5</div>
                   <div class="pcard-tags">CSS3</div>
                   <div class="pcard-tags">JavaScript</div>
                 </div>
-                <div class="pcard-footer">
-                  <div class="progress-container">
-                    <progress value="100" max="100" data-content="100%"></progress>
+              </div>
+              <div class="pcard-footer">
+                <div class="progress-container">
+                  <progress value="100" max="100" data-content="100%"></progress>
+                </div>
+                <div class="projects-btn-container">
+                  <div class="projects-btn" >
+                    <a href="https://github.com/elidianaandrade/elicosmaker" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
                   </div>
-                  <div class="projects-btn-container">
-                    <div class="projects-btn" >
-                      <a href="https://github.com/elidianaandrade/elicosmaker" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                      </a>
-                    </div>
-                    <div class="projects-btn" >
-                      <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                      </a>
-                    </div>
+                  <div class="projects-btn" >
+                    <a href="https://elidianaandrade.github.io/elicosmaker/" target="_blank">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
-            </div>   
+              </div>   
           </li>
            <!-- Project 02 --> 
            <li id="project02">
@@ -403,35 +407,34 @@
                   <div class="pcard-tags">CSS3</div>
                   <div class="pcard-tags">JavaScript</div>
                 </div>
-                <div class="pcard-footer">
-                  <div class="progress-container">
-                    <progress value="50" max="100" data-content="50%"></progress>
+              </div>
+              <div class="pcard-footer">
+                <div class="progress-container">
+                  <progress value="50" max="100" data-content="50%"></progress>
+                </div>
+                <div class="projects-btn-container">
+                  <div class="projects-btn" >
+                    <a href="https://github.com/elidianaandrade/archstil" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
                   </div>
-                  <div class="projects-btn-container">
-                    <div class="projects-btn" >
-                      <a href="https://github.com/elidianaandrade/archstil" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                      </a>
-                    </div>
-                    <div class="projects-btn" >
-                      <a href="https://elidianaandrade.github.io/archstil/" target="_blank">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                      </a>
-                    </div>
+                  <div class="projects-btn" >
+                    <a href="https://elidianaandrade.github.io/archstil/" target="_blank">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
                 </div>
-            </div>   
+              </div>
           </li>         
 
         </ul>
       </div>
       <div class="projects-footer">
         <a href="https://github.com/elidianaandrade" target="_blank">
-          <button class="button-projects">See more</button>
+          <button class="btn-gradient">See more</button>
         </a>
       </div>  
     </div>
-    <!-- Projects Content 2 -->
     <div class="projects-content2">
     </div>
   </section>
