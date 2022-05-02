@@ -641,23 +641,37 @@ input:checked + .slider:before { /* sun icon */
   display: flex;
   flex-direction: column;
   border: 0.1rem solid var(--grayd);
-  height: 29rem;
-  overflow: auto;
+  overflow-x: hidden;
+  transition: .4s;
+}
+
+.projects-card:hover{
+  -webkit-box-shadow: 0 0.5rem 1.5rem var(--grayd);
+  box-shadow: 0 0.5rem 1.5rem  var(--grayd);
+  transition: .4s;
+}
+
+.projects-card:hover .pcard-cover{
+  transform: scale(1.04);
+  transition: .4s;
 }
 
 .pcard-cover {
   width: 100%;
+  height: 100%;
 }
 
 .pcard-cover-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pcard-description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 1rem;
+  min-height: 13rem;
 }
 
 .pcard-tags-container {
@@ -727,14 +741,14 @@ progress::after { /* percent text */
   margin: -1.15rem 0 0 10.5rem;
 }
 
-.projects-btn-container {
+.pcard-btn-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: right;
 }
 
-.projects-btn {
+.pcard-btn {
   font-size: 2rem;
   background: linear-gradient(var(--blue), var(--green));  
   -webkit-background-clip: text;
@@ -747,9 +761,9 @@ progress::after { /* percent text */
   transform: scale(1);
 }
 
-.projects-btn:hover {
+.pcard-btn:hover {
   transition: .4s;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .projects-footer {
