@@ -15,14 +15,12 @@
 <body> 
   <header id="header">
     <div id="toggle-bar">
-      <!-- Toggle Nav -->
       <nav id="toggle-nav">
         <button id="toggle-btn">
             <span id="toggle-btn-icon"></span>
         </button>
-        <!-- Toggle Menu --> 
-        <ul id="toggle-menu">
-          <li>
+        <ul id="toggle-menu-list">
+          <li class="toggle-menu-items">
             <a href="#home">
               <div class="toggle-menu-icons">
                 <i class="fa-solid fa-house"></i>
@@ -30,7 +28,7 @@
               <div class="toggle-menu-text">Home</div>
             </a>
           </li>
-          <li>
+          <li class="toggle-menu-items">
             <a href="#about">
               <div class="toggle-menu-icons">
                 <i class="fa-solid fa-user"></i>
@@ -38,7 +36,7 @@
               <div class="toggle-menu-text">About me</div>
             </a>
           </li>
-          <li>
+          <li class="toggle-menu-items">
             <a href="#education">
               <div class="toggle-menu-icons">
                 <i class="fa-solid fa-graduation-cap"></i>
@@ -99,9 +97,13 @@
         </div>
       </div>
       <div class="intro-content2">
-        <img class="intro-logo" src="assets/img/logo-elidianaandrade.png" alt="Logo Elidiana Andrade">
         <nav>
-          <ul class="menu-social-list">
+          <ul id="menu-social-list">
+            <li class="menu-social-items">
+              <a href="mailto:elidianaandrade@outlook.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
             <li class="menu-social-items">
               <a href="https://github.com/elidianaandrade" target="_blank">
                 <i class="fa-brands fa-github"></i>
@@ -124,17 +126,11 @@
             </li>
           </ul>
         </nav>
-        <ul class="contact-list">
-          <li class="contact-items"><a href="mailto:elidianaandrade@outlook.com"><div class="contact-icons"><i class="fa-solid fa-envelope"></i></div>elidianaandrade@outlook.com</a></li>
-          <li class="contact-items"><a><div class="contact-icons"><i class="fa-solid fa-location-dot"></i></div>Salvador-BA, Brazil</a></li>
-        </ul> 
       </div>
     </section>
   </main>
-
   <!-- SECTION ABOUT ME --> 
   <section id="about" class="section-about">
-    <!-- About Content 1 -->
     <div class="about-content1">
       <div class="section-icons">
         <i class="fa-solid fa-user"></i>
@@ -163,7 +159,6 @@
         <li class="softskills-items">Hands-on</li>
       </ul>
     </div>
-    <!-- About Content 2 -->
     <div class="about-content2">
       <img class="about-avatar" src="assets/img/avatar.png" alt="Avatar Elidiana Andrade">
       <h3 class="section-subtitle">Hobbies & Interest</h3>
@@ -219,10 +214,8 @@
       </ul>
     </div>
   </section>
-
   <!-- SECTION EDUCATION --> 
   <section id="education" class="section-education">
-    <!-- Education Content 1 -->
     <div class="education-content1">
       <div class="section-icons">
         <i class="fa-solid fa-graduation-cap"></i>
@@ -258,7 +251,6 @@
         </li>
       </ul>
     </div>
-    <!-- Education Content 2 -->
     <div class="education-content2">
       <h3 class="section-subtitle">Softwares</h3>
         <ul class="software-list">
@@ -337,10 +329,8 @@
         </ul>
     </div>
   </section>
-
   <!-- SECTION PROJECTS --> 
   <section id="projects" class="section-projects">
-    <!-- Projects Content 1 -->
     <div class="projects-content1">
       <div class="section-icons">
         <i class="fa-solid fa-rocket"></i>
@@ -349,17 +339,14 @@
       <p class="section-description">
         See the repositories of my projects on <a href="https://github.com/elidianaandrade" target="_blank">GitHub</a>.
       </p>
-      <!-- Projects Galerry -->
       <div class="projects-gallery">
         <ul class="projects-list">  
           <!-- Project 01 --> 
           <li id="project01">
             <div class ="projects-card">
-              <!-- Project Cover -->
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" src="assets/img/projects-covers/cover-screen-elicosmaker.png" alt="Cover Project Eli Cosmaker">
               </div>
-              <!-- Project Description -->
               <div class ="pcard-description">
                 <h3 class="section-subtitle">ELI COSMAKER</h3>
                 <p class="section-description">
@@ -392,11 +379,9 @@
            <!-- Project 02 --> 
            <li id="project02">
             <div class ="projects-card">
-              <!-- Project Cover -->
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" src="assets/img/projects-covers/cover-screen-archstil.png" alt="Cover Project ArchStil">
               </div>
-              <!-- Project Description -->
               <div class ="pcard-description">
                 <h3 class="section-subtitle">ARCHSTIL</h3>
                 <p class="section-description">
@@ -438,33 +423,23 @@
     <div class="projects-content2">
     </div>
   </section>
-
+  <!-- SECTION CONTACT --> 
+  <section id="contact" class="section-contact">
+    <div class="contact-content1">
+      <div class="section-icons">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-description">
+        Contact.
+      </p>
+      <ul id="contact-list">
+        <li class="contact-items"><a href="mailto:elidianaandrade@outlook.com"><div class="contact-icons"><i class="fa-solid fa-envelope"></i></div>elidianaandrade@outlook.com</a></li>
+        <li class="contact-items"><a><div class="contact-icons"><i class="fa-solid fa-location-dot"></i></div>Salvador-BA, Brazil</a></li>
+      </ul> 
+  </section>
   <!-- FOOTER --> 
   <footer class="section-footer">
-    <nav>
-      <ul class="menu-social-list">
-        <li class="menu-social-items">
-          <a href="https://github.com/elidianaandrade" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li class="menu-social-items">
-          <a href="https://codepen.io/elidianaandrade" target="_blank">
-            <i class="fa-brands fa-codepen"></i>
-          </a>
-        </li>
-        <li class="menu-social-items">
-          <a href="https://www.instagram.com/elidianaandrade/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-        <li class="menu-social-items">
-          <a href="https://www.linkedin.com/in/elidianaandrade/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
     <span class="footer-description">
       © 2022. Elidiana Andrade. All rights reserved. See repository on <a href="https://github.com/elidianaandrade" target="_blank">GitHub</a>.
     </span>

@@ -1,14 +1,17 @@
-/* TOGGLE MENU  */
-function toggleMenu() {
+/* TOGGLE MENU ACTIVE */
+function toggleMenuActive() {
     const toggleNav = document.getElementById('toggle-nav');
     toggleNav.classList.toggle('active');
 }
 
 const toggleButton = document.getElementById('toggle-btn');
 
-toggleButton.addEventListener('click', toggleMenu);
-/* TOGGLE MENU END */
+toggleButton.addEventListener('click', toggleMenuActive);
+/* TOGGLE MENU ACTIVE END */
 
+/* TOGGLE MENU ITEMS ACTIVE */
+
+/* TOGGLE MENU ITEMS ACTIVE END */
 
 /* LIGHT MODE */
 function changeMode() {
