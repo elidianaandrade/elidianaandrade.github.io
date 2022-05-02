@@ -646,8 +646,8 @@ input:checked + .slider:before { /* sun icon */
 }
 
 .projects-card:hover{
-  -webkit-box-shadow: 0 0.5rem 1.5rem var(--grayd);
-  box-shadow: 0 0.5rem 1.5rem  var(--grayd);
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgb(84, 84, 84, 0.6);
+  box-shadow: 0 0.5rem 1.5rem rgb(84, 84, 84, 0.6);
   transition: .4s;
 }
 
@@ -683,7 +683,7 @@ input:checked + .slider:before { /* sun icon */
 }
 
 .pcard-tags {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--black);
   padding: 0.4rem 0.8rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
@@ -736,9 +736,9 @@ progress::after { /* percent text */
 	content: attr(data-content);
   display: block;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--grayl);
-  margin: -1.15rem 0 0 10.5rem;
+  margin: -1.45rem 0 0 10.5rem;
 }
 
 .pcard-btn-container {
@@ -770,6 +770,7 @@ progress::after { /* percent text */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1rem 0;
 }
 
 .projects-content2 {
