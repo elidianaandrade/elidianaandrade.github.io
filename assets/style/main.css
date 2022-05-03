@@ -527,7 +527,7 @@ input:checked + .slider:before { /* sun icon */
 
 .education-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100%);
+  grid-template-columns: repeat(1, 100%);
 }
 
 .education-card {
@@ -617,7 +617,7 @@ input:checked + .slider:before { /* sun icon */
 .projects-content1 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
   margin-right: 5rem;
 }
 
@@ -627,13 +627,13 @@ input:checked + .slider:before { /* sun icon */
   margin: 1rem 0;
 }
 
-.projects-list {
+#projects-list {
   display: grid;
-  grid-auto-flow: column dense;
+  grid-template-columns: repeat(3, 32%);
   margin-left: -1rem;
 }
 
-.projects-list > li {
+#projects-list > li {
   padding: 1rem;
 }
 
@@ -670,8 +670,9 @@ input:checked + .slider:before { /* sun icon */
 .pcard-description {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
-  min-height: 13rem;
+  min-height: 12rem;
 }
 
 .pcard-tags-container {
@@ -679,7 +680,7 @@ input:checked + .slider:before { /* sun icon */
   flex-flow: row wrap;
   align-items: baseline;
   justify-content: left;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .pcard-tags {
@@ -697,7 +698,7 @@ input:checked + .slider:before { /* sun icon */
   align-items:center;
   justify-content: space-between;
   border-top: 0.1rem solid var(--grayd);
-  padding: 1rem;
+  padding: 0.8rem 1.2rem;
 }
 
 .progress-container {
@@ -764,6 +765,15 @@ progress::after { /* percent text */
 .pcard-btn:hover {
   transition: .4s;
   transform: scale(1.1);
+}
+
+.projectsl2{
+  display: none;
+}
+
+.projectsl2.active {
+  display: flex;
+  transition: .6s;
 }
 
 .projects-footer {
