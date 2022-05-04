@@ -12,13 +12,19 @@
   --dark:  #1B1C1E;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: "Poppins", Arial, sans-serif;
   text-decoration: none;
   list-style: none;
+
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: var(--dark) var(--grayd); 
 }
@@ -166,14 +172,16 @@ body::-webkit-scrollbar-thumb {
 .toggle-menu-text{
   display: block;
   position: absolute;
+  background: var(--black); 
+  opacity: 85%;
+
   letter-spacing: 0.125rem;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;
   color: var(--green);
-  background: var(--black); 
-  opacity: 85%;
+
   visibility: hidden;
   margin: -4.2rem 4.5rem;
   padding: 1.32rem;
@@ -769,11 +777,6 @@ progress::after { /* percent text */
 
 .projectsl2{
   display: none;
-}
-
-.projectsl2.active {
-  display: flex;
-  transition: .6s;
 }
 
 .projects-footer {

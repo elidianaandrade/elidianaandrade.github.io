@@ -33,14 +33,3 @@ const lightButton = document.getElementById('mode-selector');
 
 lightButton.addEventListener('click', changeMode);
 /* LIGHT END */
-
-/* LOAD MORE ACTIVE */
-function loadMoreActive() {
-    const loadMore = document.querySelectorAll('.projectsl2')[0];
-    loadMore.classList.toggle('active');
-}
-
-const loadMoreBtn = document.getElementById('load-more');
-
-loadMoreBtn.addEventListener('click', loadMoreActive);
-/* LOAD MORE ACTIVE END */
