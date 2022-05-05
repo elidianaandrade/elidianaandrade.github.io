@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
 }
 
-#toggle-btn {
+#toggle-button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb {
   transition: 1s;
 }
 
-#toggle-btn-icon::before { /* line top */
+#toggle-button-icon::before { /* line top */
   content: '';
   display: block;
   width: 2.25rem;
@@ -89,7 +89,7 @@ body::-webkit-scrollbar-thumb {
   transition: .6s;
 }
 
-#toggle-btn-icon { /* line center */
+#toggle-button-icon { /* line center */
   border-top: 0.25rem solid;
   border-radius: 1rem;
   width: 2.25rem;
@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--black);
 }
 
-#toggle-btn-icon::after { /* line end */
+#toggle-button-icon::after { /* line end */
   content: '';
   display: block;
   width: 2.25rem;
@@ -108,16 +108,16 @@ body::-webkit-scrollbar-thumb {
   transition: .6s;
 }
 
-#toggle-nav.active #toggle-btn-icon { 
+#toggle-nav.active #toggle-button-icon { 
   border-top: transparent; 
 }
 
-#toggle-nav.active #toggle-btn-icon::before {
+#toggle-nav.active #toggle-button-icon::before {
   transform: rotate(-135deg);
   margin-top: 0.15rem;
 }
 
-#toggle-nav.active #toggle-btn-icon::after {
+#toggle-nav.active #toggle-button-icon::after {
   transform: rotate(135deg);
   margin-top: -0.3rem;
 }
@@ -309,14 +309,14 @@ input:checked + .slider:before { /* sun icon */
   margin: 1rem 0 1rem 0;
 }
 
-.intro-btns {
+.intro-buttons-container {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: left;
 }
 
-.btn-gradient {
+.button-gradient {
   font-size: 1.125rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -333,7 +333,7 @@ input:checked + .slider:before { /* sun icon */
   transition: .4s;
 }
 
-.btn-gradient:hover {
+.button-gradient:hover {
   background: linear-gradient(to right, var(--green), var(--blue)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -750,14 +750,14 @@ progress::after { /* percent text */
   margin: -1.45rem 0 0 10.5rem;
 }
 
-.pcard-btn-container {
+.pcard-buttons-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: right;
 }
 
-.pcard-btn {
+.pcard-button {
   font-size: 2rem;
   background: linear-gradient(var(--blue), var(--green));  
   -webkit-background-clip: text;
@@ -770,13 +770,9 @@ progress::after { /* percent text */
   transform: scale(1);
 }
 
-.pcard-btn:hover {
+.pcard-button:hover {
   transition: .4s;
   transform: scale(1.1);
-}
-
-.projectsl2{
-  display: none;
 }
 
 .projects-footer {

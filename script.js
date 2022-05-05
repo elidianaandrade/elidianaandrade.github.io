@@ -4,7 +4,7 @@ function toggleMenuActive() {
     toggleNav.classList.toggle('active');
 }
 
-const toggleButton = document.getElementById('toggle-btn');
+const toggleButton = document.getElementById('toggle-button');
 
 toggleButton.addEventListener('click', toggleMenuActive);
 /* TOGGLE MENU ACTIVE END */
