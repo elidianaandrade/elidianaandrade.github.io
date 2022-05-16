@@ -5,11 +5,12 @@
   --blue: #00D1FF;
   --green: #00FFF0;
   --black: #1B1C1E;
-  --grayd: #545454;
+  --grayd: #3D3D3D;
   --grayl: #CACACA;
   --white: #FAFAFA;
   --light: #F8F9FA;
-  --dark:  #1B1C1E;
+  --dark:  #151515;
+  --dark-blue: #212327;
 }
 
 html {
@@ -26,7 +27,7 @@ html {
   list-style: none;
 
   scrollbar-width: thin; /* Firefox */
-  scrollbar-color: var(--dark) var(--grayd); 
+  scrollbar-color: var(--dark-blue) var(--grayd); 
 }
 
 body {
@@ -41,16 +42,15 @@ a {
 
 /* SCROLLBAR STYLE (Chrome, Edge, Safari Style) */
 body::-webkit-scrollbar {
-  width: 0.45rem;
+  width: 0.4rem;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--dark);
+  background: var(--dark-blue);
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--grayd);
-  border-radius: 1rem;
 }
 /* SCROLLBAR END */
 
@@ -158,7 +158,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-text-stroke-width: 0.05rem;
   -webkit-text-stroke-color: var(--grayl);
   color: transparent;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .toggle-menu-icons:hover{
@@ -172,7 +172,7 @@ body::-webkit-scrollbar-thumb {
 .toggle-menu-text{
   display: block;
   position: absolute;
-  background: var(--black); 
+  background: var(--dark); 
   opacity: 85%;
 
   letter-spacing: 0.125rem;
@@ -183,12 +183,11 @@ body::-webkit-scrollbar-thumb {
   color: var(--green);
 
   visibility: hidden;
-  margin: -4.2rem 4.5rem;
-  padding: 1.32rem;
+  margin: -4.1rem 4.5rem;
+  padding: 1.4rem;
 }
 
 #toggle-nav.active #toggle-menu-list li:hover .toggle-menu-text { /* icon hover text visible */
-  width: 8.5rem;
   visibility: visible;
 }
 /* TOGGLE MENU END */
@@ -219,7 +218,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 0; 
   left: 0;
   cursor: pointer;
-  background-color: #1F1F1F;
+  background-color: var(--dark-blue);
   border: 0.06rem solid #151515;
   border-radius: 1rem;
   box-shadow: inset 0 0 0.125rem var(--grayd);
@@ -259,7 +258,7 @@ input:checked + .slider:before { /* sun icon */
   flex-flow: row wrap;
   align-items: center;
   justify-content: left;
-  padding: 8rem 0 8rem 8.5rem;
+  padding: 10rem 0 8rem 8.5rem;
 }
 
 .intro-content1 {
@@ -286,7 +285,7 @@ input:checked + .slider:before { /* sun icon */
   font-family: "Poppins", Arial, sans-serif;
   font-size: 4.2rem;
   font-weight: 700;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   color: var(--white); 
 }
 
@@ -294,19 +293,6 @@ input:checked + .slider:before { /* sun icon */
   font-family: "Lato", Arial, sans-serif;
   font-size: 1.4rem;
   text-align: justify;
-}
-
-.technologies-list {
-  display: flex;
-  flex-flow: row wrap;
-  font-size: 3rem;
-  letter-spacing: 1.25rem;
-  background: linear-gradient(var(--blue), var(--green));  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  margin: 1rem 0 1rem 0;
 }
 
 .intro-buttons-container {
@@ -345,28 +331,13 @@ input:checked + .slider:before { /* sun icon */
   transition: .4s;
 }
 
-.intro-content2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: right;
-  min-width: 30%;
-}
-
-.intro-logo {
-  width: 7rem;
-  height: 7rem;
-}
-
 #menu-social-list {
   display: flex;
-  flex-direction: column;
-}
-
-.menu-social-items > a {
-  font-size: 2rem;
+  flex-flow: row wrap;
+  gap: 0.9rem;
+  padding: 1.5rem 0;
+  font-size: 2.15rem;
   color: var(--white);
-  padding: 0.5rem;
 }
 
 .menu-social-items > a:hover {
@@ -376,7 +347,6 @@ input:checked + .slider:before { /* sun icon */
   background-clip: text;
   color: transparent; 
 }
-
 /* INTRODUCTION END */
 
 
@@ -460,6 +430,21 @@ input:checked + .slider:before { /* sun icon */
   margin-right: 1rem;
 }
 
+.hardskills-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.25rem;
+}
+
+.hardskills-icons {
+  font-size: 1.5rem;
+  background: linear-gradient(var(--blue), var(--green));  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 .softskills-list > li {
   display:block;  
   font-size: 1.25rem;
@@ -523,7 +508,7 @@ input:checked + .slider:before { /* sun icon */
 .section-education {
   display: flex;
   flex-flow: row wrap;
-  padding: 6.5rem 0 8rem 8.5rem ;
+  padding: 6.5rem 0 8rem 8.5rem;
 }
 
 .education-content1 {
@@ -533,55 +518,76 @@ input:checked + .slider:before { /* sun icon */
   margin-right: 5rem;
 }
 
-.education-list {
-  display: grid;
-  grid-template-columns: repeat(1, 100%);
+#education-timeline {
+  position: relative;
+  margin-top: 1rem;
 }
 
-.education-card {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  background-color: #333740;
-  border-radius: 0.4rem;
-  border-left: 0.75rem solid;
-  border-image: linear-gradient(var(--blue), var(--green)) 27; 
-  padding: 1rem 1rem 1.5rem;
-  margin-top: 1.5rem;
+#education-timeline::before{  /* circle unchecked  */
+  content: '';
+  position: absolute;
+  display: block;
+  top: 49%;
+  left: -1%;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.2rem solid var(--dark-blue);
+  border-radius: 100%;
+  background: var(--dark);
 }
 
-.ecard-content1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 20%;
+#education-timeline::after{  /* circle checked */
+  content: '';
+  position: absolute;
+  display: block;
+  top: 6.5%;
+  left: -1%;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.2rem solid var(--dark-blue);
+  border-radius: 100%;
+  background: linear-gradient(to left, var(--blue), var(--green));
+}
+
+#education-timeline ul {
+  margin: 0;
+  padding: 0;
+}
+
+#education-timeline ul::before {  /* line */
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0.5%;
+  width: 0.2rem;
+  height: 42%;
+  background: var(--dark-blue);
+  z-index: -1000;
+}
+
+#education-timeline ul li {
+  position: relative;
+  padding: 1.25rem 3rem;
+}
+
+.education-timeline-time {
   font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--white); 
-  text-align: right;
-  margin-right: 2rem;
 }
 
-.ecard-content2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.ecard-note {
+.education-timeline-note {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  font-size: 1.2rem;
-  color: var(--grayl);
-  margin: 0.7rem 0 0;
+  margin: 0.65rem 0;
+  gap: 0.65rem;
 }
 
-.ecard-note > i {
-  font-size: 1.5rem;
-  -webkit-text-stroke-width: 0.05rem;
-  -webkit-text-stroke-color: var(--green);
-  color: transparent;
-  margin-right: 0.5rem;
+.education-timeline-note i { /* award icon*/
+  background: linear-gradient(var(--blue), var(--green));  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;  
 }
 
 .education-content2 {
@@ -648,7 +654,7 @@ input:checked + .slider:before { /* sun icon */
 .projects-card {
   display: flex;
   flex-direction: column;
-  border: 0.1rem solid var(--grayd);
+  border: 0.1rem solid var(--dark-blue);
   overflow-x: hidden;
   transition: .4s;
 }
@@ -693,11 +699,11 @@ input:checked + .slider:before { /* sun icon */
 
 .pcard-tags {
   font-size: 1rem;
-  color: var(--black);
+  color: var(--grayl);
   padding: 0.4rem 0.8rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 5rem;
-  background: var(--grayl);
+  background: var(--dark-blue);
 }
 
 .pcard-footer {
@@ -705,7 +711,7 @@ input:checked + .slider:before { /* sun icon */
   flex-flow: row wrap;
   align-items:center;
   justify-content: space-between;
-  border-top: 0.1rem solid var(--grayd);
+  border-top: 0.1rem solid var(--dark-blue);
   padding: 0.8rem 1.2rem;
 }
 
@@ -722,7 +728,7 @@ progress { /* remove style default */
 }
 
 progress::-webkit-progress-bar { /* background bar */
-  background: var(--grayd);
+  background: var(--dark-blue);
   border-radius: 1rem;
   padding: 0.15rem;
   height: 0.8rem;
@@ -836,10 +842,10 @@ progress::after { /* percent text */
 /* FOOTER STYLE */
 .section-footer {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrapp;
   align-items: center;
-  justify-content: center;
-  margin: 2rem 2rem 4rem;
+  justify-content: space-between;
+  padding: 6.5rem 4rem 2.15rem 8.5rem;
 }
 
 .footer-description {
@@ -849,11 +855,7 @@ progress::after { /* percent text */
 }
 
 .up-container {
-  position: fixed;
-  text-align: center;
-  top: 90%;
-  bottom: 5%;
-  left: 96%;
+  text-align: right;
 }
 
 .up {

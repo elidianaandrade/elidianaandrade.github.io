@@ -78,26 +78,7 @@
         <span class="intro-category">Web Developer</span>
         <h1 class="intro-title">I'm Elidiana Andrade,</h1>
         <p class="intro-description">
-          Objective to work in the area of Information and Communication Technology (ICT) in Web Development or Data Management. Basic knowledge of  relational database management system, logic and programming languages, markup and styling: SQL, JavaScript, HTML, and CSS.
-        </p>
-        <ul class="technologies-list">
-          <li><i class="fa-solid fa-database"></i></li>
-          <li><i class="fa-brands fa-git-alt"></i></li>
-          <li><i class="fa-brands fa-figma"></i></li>
-          <li><i class="fa-brands fa-js-square"></i></li>
-          <li><i class="fa-brands fa-html5"></i></li>
-          <li><i class="fa-brands fa-css3-alt"></i></li>
-        </ul>
-        <div class="intro-buttons-container">
-          <a href="#projects">
-            <button class="button-gradient">
-              View Portfolio
-              <i class="fa-solid fa-arrow-down"></i>
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="intro-content2">
+          Objective to work in Web Development or Data Management. Basic knowledge of  relational database management system, React.Js, programming languages, markup and styling: SQL, JavaScript, HTML, CSS.        </p>
         <nav>
           <ul id="menu-social-list">
             <li class="menu-social-items">
@@ -116,6 +97,11 @@
               </a>
             </li>
             <li class="menu-social-items">
+              <a href="https://twitter.com/elidianaandrade" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="menu-social-items">
               <a href="https://www.instagram.com/elidianaandrade/" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
               </a>
@@ -127,6 +113,14 @@
             </li>
           </ul>
         </nav>
+        <div class="intro-buttons-container">
+          <a href="#projects">
+            <button class="button-gradient">
+              View Portfolio
+              <i class="fa-solid fa-arrow-down"></i>
+            </button>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -140,24 +134,48 @@
       <p class="section-description">
         Experience with administrative routines, support and service, such as document analysis, support to technicians and voluntary monitoring.  Ease of learning and basics about relational database management system; basic knowledge of SQL; AdvPL. Basic knowledge of logic and programming languages, markup and styling: SQL, JavaScript, HTML, and CSS.
       </p><br>
-      <div class="languages">
-          <div class="languages-icon">
-            <i class="fa-solid fa-language"></i>
-          </div>
-          <span>
-            english (intermediary) / spanish (basic) / portuguese (native)
-          </span>      
-      </div>
-      <h3 class="section-subtitle">Softskills</h3>
-      <ul class="softskills-list">
-        <li class="softskills-items">Creativity</li>
-        <li class="softskills-items">Organization</li>
-        <li class="softskills-items">Communication</li>
-        <li class="softskills-items">Self-discipline</li>
-        <li class="softskills-items">Problem solving</li>
-        <li class="softskills-items">Teamwork</li>
-        <li class="softskills-items">Adaptability</li>
-        <li class="softskills-items">Hands-on</li>
+      <ul id="tabbed-skills-list">
+        <li class="tabbed-skills-items">
+          <div class="tabbed-skills-container">
+            <h4 class="tabbed-skills-title">Hardskills</h4>
+            <p>
+              <div class="languages">
+                <div class="languages-icon">
+                  <i class="fa-solid fa-language"></i>
+                </div>
+                <p class="section-description">
+                  english (intermediary) / spanish (basic) / portuguese (native)
+                </p>      
+              </div>
+              <ul class="technologies-list">
+                <li><i class="fa-solid fa-database"></i></li>
+                <li><i class="fa-brands fa-git-alt"></i></li>
+                <li><i class="fa-brands fa-figma"></i></li>
+                <li><i class="fa-brands fa-js-square"></i></li>
+                <li><i class="fa-brands fa-html5"></i></li>
+                <li><i class="fa-brands fa-css3-alt"></i></li>
+              </ul>
+            </p>
+          </div>    
+        </li>
+        <li class="tabbed-skills-items">
+          <div class="tabbed-skills-container">
+            <h4 class="tabbed-skills-title">Softskills</h4>
+            <p>
+              <h3 class="section-subtitle">Softskills</h3>
+              <ul class="softskills-list">
+                <li class="softskills-items">Creativity</li>
+                <li class="softskills-items">Organization</li>
+                <li class="softskills-items">Communication</li>
+                <li class="softskills-items">Self-discipline</li>
+                <li class="softskills-items">Problem solving</li>
+                <li class="softskills-items">Teamwork</li>
+                <li class="softskills-items">Adaptability</li>
+                <li class="softskills-items">Hands-on</li>
+              </ul> 
+            </p>
+          </div>    
+        </li>
       </ul>
     </div>
     <div class="about-content2">
@@ -223,33 +241,31 @@
       </div>
       <h2 class="section-title">Education</h2>
       <p class="section-description">Complete Higher Education.</p>
-      <ul class="education-list">   
-        <li>
-          <div class ="education-card">
-            <div class ="ecard-content1">
-              <span>2022 – studying</span>
+      <div id="education-timeline">
+        <ul>   
+          <li>
+            <div class ="education-timeline-time">
+              <h4>2022 – studying</h4>
             </div>
-            <div class ="ecard-content2">
+            <div class ="education-timeline-content">
               <h3 class="section-subtitle">System Analysis and Development</h3>
               <p class="section-description">Description</p>
             </div>
-          </div>
-        </li>
-        <li>
-          <div class ="education-card">
-            <div class ="ecard-content1">
-              <span>2016 – 2021</span>
+          </li>
+          <li>
+            <div class ="education-timeline-time">
+              <h4>2016 – 2021</h4>
             </div>
-            <div class ="ecard-content2">
+            <div class ="education-timeline-content">
               <h3 class="section-subtitle">Architecture and Urbanism</h3>
               <p class="section-description">Universidade Salvador (Laureate International Universities)</p>
-              <div class="ecard-note">
+              <div class="education-timeline-note">
                 <i class="fa-solid fa-award"></i>
                 <p>1º place in Academic Merit Award 2018</p>   
               </div>
             </div>
-          </div>
-        </li>
+          </li>
+        </div>
       </ul>
     </div>
     <div class="education-content2">
@@ -405,7 +421,7 @@
                     </a>
                   </div>
                   <div class="pcard-button" >
-                    <a href="https://elidianaandrade.github.io/archstil/" target="_blank">
+                    <a href="https://archstil.netlify.app/" target="_blank">
                       <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                   </div>

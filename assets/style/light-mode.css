@@ -2,11 +2,12 @@
     --blue: #00D1FF;
     --green: #00FFF0;
     --black: #1B1C1E;
-    --grayd: #545454;
+    --grayd: #3D3D3D;
     --grayl: #CACACA;
     --white: #FAFAFA;
     --light: #F8F9FA;
-    --dark:  #1B1C1E;
+    --dark:  #151515;
+    --dark-blue: #212327;
   }
 
 
@@ -30,7 +31,6 @@ body.light-mode::-webkit-scrollbar-track {
   
 body.light-mode::-webkit-scrollbar-thumb {
     background-color: var(--grayl);
-    border-radius: 1rem;
 }
 /* SCROLLBAR END */
 
@@ -52,7 +52,7 @@ body.light-mode::-webkit-scrollbar-thumb {
 }
 
 .toggle-menu-text.light-mode {
-    background: var(--white); 
+    background: var(--light); 
 }
 /* TOGGLE MENU END */
 

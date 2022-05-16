@@ -16,6 +16,7 @@ Portfolio
 
 ## 🛠️ Utilities
 - **Icons:** [Font Awesome](https://fontawesome.com/icons)
+- **Favicon:** [Favicon.io](https://favicon.io/)
 
 <br>
 
