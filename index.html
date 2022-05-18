@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="assets/style/main.css"/>
   <link rel="stylesheet" href="assets/style/light-mode.css">
   <link rel="stylesheet" href="assets/style/responsive.css">
-  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon" />
 </head>
 
 <body> 
@@ -123,7 +123,7 @@
         </div>
       </div>
     </section>
-  </main>
+  </main> 
   <!-- SECTION ABOUT ME --> 
   <section id="about" class="section-about">
     <div class="about-content1">
@@ -134,50 +134,52 @@
       <p class="section-description">
         Experience with administrative routines, support and service, such as document analysis, support to technicians and voluntary monitoring.  Ease of learning and basics about relational database management system; basic knowledge of SQL; AdvPL. Basic knowledge of logic and programming languages, markup and styling: SQL, JavaScript, HTML, and CSS.
       </p><br>
-      <ul id="tabbed-skills-list">
-        <li class="tabbed-skills-items">
-          <div class="tabbed-skills-container">
-            <h4 class="tabbed-skills-title">Hardskills</h4>
-            <p>
-              <div class="languages">
-                <div class="languages-icon">
-                  <i class="fa-solid fa-language"></i>
-                </div>
-                <p class="section-description">
-                  english (intermediary) / spanish (basic) / portuguese (native)
-                </p>      
-              </div>
-              <ul class="technologies-list">
-                <li><i class="fa-solid fa-database"></i></li>
-                <li><i class="fa-brands fa-git-alt"></i></li>
-                <li><i class="fa-brands fa-figma"></i></li>
-                <li><i class="fa-brands fa-js-square"></i></li>
-                <li><i class="fa-brands fa-html5"></i></li>
-                <li><i class="fa-brands fa-css3-alt"></i></li>
-              </ul>
-            </p>
-          </div>    
-        </li>
-        <li class="tabbed-skills-items">
-          <div class="tabbed-skills-container">
-            <h4 class="tabbed-skills-title">Softskills</h4>
-            <p>
-              <h3 class="section-subtitle">Softskills</h3>
-              <ul class="softskills-list">
-                <li class="softskills-items">Creativity</li>
-                <li class="softskills-items">Organization</li>
-                <li class="softskills-items">Communication</li>
-                <li class="softskills-items">Self-discipline</li>
-                <li class="softskills-items">Problem solving</li>
-                <li class="softskills-items">Teamwork</li>
-                <li class="softskills-items">Adaptability</li>
-                <li class="softskills-items">Hands-on</li>
-              </ul> 
-            </p>
-          </div>    
-        </li>
+      <!-- TABBED --> 
+      <ul id="tabbed-skills-list"> <!-- tabbed menu -->
+        <li id="tabbed-menu-hardskills" class="active">Hard Skills</li>
+        <li id="tabbed-menu-softskills">Soft Skills</li>
       </ul>
-    </div>
+      <div class="tabbed-skills-container">
+        <!-- hardskills -->
+        <h4 class="tabbed-skills-title">Hard Skills</h4>
+        <div id="hardskills" class="tabbed-skills-content">
+          <p>
+            <div class="languages">
+              <div class="languages-icon">
+                <i class="fa-solid fa-language"></i>
+              </div>
+              <p class="section-description">
+                english (intermediary) / spanish (basic) / portuguese (native)
+              </p>      
+            </div>
+            <ul class="technologies-list">
+              <li><i class="fa-solid fa-database"></i></li>
+              <li><i class="fa-brands fa-git-alt"></i></li>
+              <li><i class="fa-brands fa-figma"></i></li>
+              <li><i class="fa-brands fa-js-square"></i></li>
+              <li><i class="fa-brands fa-html5"></i></li>
+              <li><i class="fa-brands fa-css3-alt"></i></li>
+            </ul>
+          </p>
+        </div>  
+        <!-- softskills -->
+        <div id="softskills" class="tabbed-skills-content">
+          <h4 class="tabbed-skills-title">Soft Skills</h4>
+          <h3 class="section-subtitle">Softskills</h3>
+            <ul class="softskills-list">
+              <li class="softskills-items">Creativity</li>
+              <li class="softskills-items">Organization</li>
+              <li class="softskills-items">Communication</li>
+              <li class="softskills-items">Self-discipline</li>
+              <li class="softskills-items">Problem solving</li>
+              <li class="softskills-items">Teamwork</li>
+              <li class="softskills-items">Adaptability</li>
+              <li class="softskills-items">Hands-on</li>
+            </ul> 
+          </div>
+      </div>
+      <!-- TABBED END -->
+    </div>  
     <div class="about-content2">
       <img class="about-avatar" src="assets/img/avatar.png" alt="Avatar Elidiana Andrade">
       <h3 class="section-subtitle">Hobbies & Interest</h3>

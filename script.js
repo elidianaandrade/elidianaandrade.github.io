@@ -9,9 +9,30 @@ const toggleButton = document.getElementById('toggle-button');
 toggleButton.addEventListener('click', toggleMenuActive);
 /* TOGGLE MENU ACTIVE END */
 
-/* TOGGLE MENU ITEMS ACTIVE */
+/* TABBED MENU ACTIVE */
+function tabbedSoftskillsActive() {
+    const softskillsActive = document.getElementById('tabbed-menu-softskills');
+    softskillsActive.classList.add('active');
+    const hardskillsInactive = document.getElementById('tabbed-menu-hardskills');
+    hardskillsInactive.classList.remove('active');
+}
 
-/* TOGGLE MENU ITEMS ACTIVE END */
+const tabbedSoftskills = document.getElementById('tabbed-menu-softskills');
+
+tabbedSoftskills.addEventListener('click', tabbedSoftskillsActive);
+
+
+function tabbedHardskillsActive() {
+    const hardskillsActive = document.getElementById('tabbed-menu-hardskills');
+    hardskillsActive.classList.add('active');
+    const softskillsInactive = document.getElementById('tabbed-menu-softskills');
+    softskillsInactive.classList.remove('active');
+}
+
+const tabbedHardskills = document.getElementById('tabbed-menu-hardskills');
+
+tabbedHardskills.addEventListener('click', tabbedHardskillsActive);
+/* TABBED MENU ACTIVE END */
 
 /* LIGHT MODE */
 function changeMode() {

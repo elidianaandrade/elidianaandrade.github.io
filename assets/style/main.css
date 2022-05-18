@@ -407,6 +407,62 @@ input:checked + .slider:before { /* sun icon */
   margin-right: 5rem;
 }
 
+ul#tabbed-skills-list{ /* container menu tabbed list */
+	float: left;
+  height: 2.75rem;
+	border-bottom: 0.125rem solid var(--dark-blue);
+	width: 100%;
+}
+
+ul#tabbed-skills-list li{ /* button menu tabbed default */
+  position: relative;
+	float: left;
+  padding: 0.55rem 1rem;
+  height: 2.75rem;
+	color: var(--white);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
+  border-bottom: 0.15rem solid;
+  border-image: linear-gradient(to left, var(--green), var(--blue)) 1;
+  transition: 0.3s;  
+}
+
+#tabbed-skills-list li.active { /* button hardskills active */
+  display: block;
+  background: var(--dark-blue);
+  border-bottom: 0.15rem solid;
+  border-image: linear-gradient(to left, var(--green), var(--blue)) 1;
+  transition: 0.3s;
+}
+
+#hardskills { /* hardskills content active */
+  display: block;
+}
+
+#softskills { /* softskills content inactive */
+  display: none;
+}
+
+.tabbed-skills-container {
+	clear: both;
+	float: left;
+	width: 100%;
+	overflow: auto;
+}
+
+.tabbed-skills-title {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--white);
+  text-align: center;
+  padding: 0.45rem;
+  height: 2.75rem;
+  transition: 0.3s;
+}
+
 .languages{
   display: flex;
   flex-flow: row wrap;
@@ -527,8 +583,8 @@ input:checked + .slider:before { /* sun icon */
   content: '';
   position: absolute;
   display: block;
-  top: 49%;
-  left: -1%;
+  top: 50%;
+  left: -0.5rem;
   width: 1.15rem;
   height: 1.15rem;
   border: 0.2rem solid var(--dark-blue);
@@ -540,8 +596,8 @@ input:checked + .slider:before { /* sun icon */
   content: '';
   position: absolute;
   display: block;
-  top: 6.5%;
-  left: -1%;
+  top: 1.4rem;
+  left: -0.5rem;
   width: 1.15rem;
   height: 1.15rem;
   border: 0.2rem solid var(--dark-blue);
@@ -557,8 +613,8 @@ input:checked + .slider:before { /* sun icon */
 #education-timeline ul::before {  /* line */
   content: '';
   position: absolute;
-  top: 10%;
-  left: 0.5%;
+  top: 2.5rem;
+  left: 0.2rem;
   width: 0.2rem;
   height: 42%;
   background: var(--dark-blue);
@@ -842,7 +898,7 @@ progress::after { /* percent text */
 /* FOOTER STYLE */
 .section-footer {
   display: flex;
-  flex-flow: row wrapp;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
   padding: 6.5rem 4rem 2.15rem 8.5rem;
