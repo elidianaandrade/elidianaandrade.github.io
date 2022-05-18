@@ -54,6 +54,49 @@ body::-webkit-scrollbar-thumb {
 }
 /* SCROLLBAR END */
 
+/* PROGRESS STYLE */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+
+progress { /* remove style default */
+  display:block;
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar { /* background bar */
+  background: var(--dark-blue);
+  border-radius: 1rem;
+  padding: 0.15rem;
+  height: 0.8rem;
+}
+
+progress::-moz-progress-bar {  /* background bar */
+  background: var(--grayd);
+  border-radius: 1rem;
+  padding: 0.15rem;
+  height: 0.8rem;
+}
+
+progress::-webkit-progress-value { /* fill progress */
+  border-radius: 1rem;
+  background: linear-gradient(to left, var(--blue), var(--green));
+  box-shadow: 0 0 0.4rem #151515; 
+}
+
+progress::after { /* percent text */
+	content: attr(data-content);
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--grayl);
+  margin: -1.45rem 0 0 10.5rem;
+}
+/* PROGRESS STYLE END */
+
 /* TOGGLE MENU STYLE */
 #toggle-bar {
   display: flex;
@@ -281,6 +324,7 @@ input:checked + .slider:before { /* sun icon */
   color: transparent; 
 }
 
+
 .intro-title {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 4.2rem;
@@ -358,14 +402,6 @@ input:checked + .slider:before { /* sun icon */
   color: transparent; 
 }
 
-.section-category {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.05rem;
-  color: #8A8A8A;
-  text-transform: uppercase;
-}
-
 .section-title {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 3.2rem;
@@ -374,7 +410,7 @@ input:checked + .slider:before { /* sun icon */
   color: var(--white); 
 }
 
-.section-description {
+.section-paragraph {
   font-family: "Lato", Arial, sans-serif;
   font-size: 1.25rem;
   text-align: justify;
@@ -382,7 +418,7 @@ input:checked + .slider:before { /* sun icon */
 
 .section-subtitle {
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   line-height: 3rem;
   background: linear-gradient(to left, var(--blue), var(--green)); 
@@ -407,7 +443,7 @@ input:checked + .slider:before { /* sun icon */
   margin-right: 5rem;
 }
 
-ul#tabbed-skills-list{ /* container menu tabbed list */
+ul#tabbed-skills-list{ /* menu tabbed list */
 	float: left;
   height: 2.75rem;
 	border-bottom: 0.125rem solid var(--dark-blue);
@@ -438,46 +474,27 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   transition: 0.3s;
 }
 
-#hardskills { /* hardskills content active */
-  display: block;
-}
-
-#softskills { /* softskills content inactive */
-  display: none;
-}
-
-.tabbed-skills-container {
+#tabbed-skills-container {
 	clear: both;
 	float: left;
 	width: 100%;
 	overflow: auto;
 }
 
-.tabbed-skills-title {
-  font-size: 1.15rem;
-  font-weight: 300;
-  color: var(--white);
-  text-align: center;
-  padding: 0.45rem;
-  height: 2.75rem;
-  transition: 0.3s;
+.tabbed-skills-title, #softskills-content{ 
+  display: none;
 }
 
-.languages{
+#hardskills-content, #softskills-content.active{
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  background: linear-gradient(to left, var(--blue), var(--green)); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.3rem 1rem;
 }
 
-.languages-icon{
-  font-size: 3rem;
+.tabbed-content-icon{
+  font-size: 1.3rem;
   background: linear-gradient(var(--blue), var(--green));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -486,39 +503,78 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   margin-right: 1rem;
 }
 
-.hardskills-list {
+.tabbed-content-title { 
   display: flex;
   flex-flow: row wrap;
-  gap: 1.25rem;
+  align-items: center;
 }
 
-.hardskills-icons {
-  font-size: 1.5rem;
+.tabbed-content-title h3 { 
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  background: linear-gradient(to right, var(--blue), var(--green)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; 
+}
+
+.languages-content, .technologies-content, .softwares-content{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 0 2rem;
+}
+
+.technologies-content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.technologies-list > li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  line-height: 2rem;
+}
+
+
+.softwares-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  line-height: 2.5rem;
+}
+
+.softwares-icons {
+  font-size: 1rem;
   background: linear-gradient(var(--blue), var(--green));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  letter-spacing: 0.125rem;
+  margin-left: 1rem;
+  user-select: none;
 }
 
-.softskills-list > li {
-  display:block;  
-  font-size: 1.25rem;
+.softskills-list {
+  font-size: 1.15rem;
   color: var(--grayl); 
   line-height: 2rem;
-}
-
-.softskills-list > li:nth-child(odd) {         
-  clear:both;
-  float:left;  
-  width:35%;
+  margin: 1rem 0;
 }
 
 .about-content2 {
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: center;
+  justify-content:flex-start;
 }
 
 .about-avatar {
@@ -651,30 +707,6 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   flex-direction: column;
   margin-top: 3rem;
 }
-
-.softwares-list > li {
-  font-size: 1.25rem;
-  color: var(--grayl); 
-}
-
-.softwares-items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  line-height: 2.5rem;
-}
-
-.softwares-icons {
-  font-size: 1.3rem;
-  background: linear-gradient(var(--blue), var(--green));  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 0.125rem;
-  margin-left: 1rem;
-  user-select: none;
-}
 /* EDUCATION END */
 
 /* PROJECTS STYLE */
@@ -769,47 +801,6 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   justify-content: space-between;
   border-top: 0.1rem solid var(--dark-blue);
   padding: 0.8rem 1.2rem;
-}
-
-.progress-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: left;
-}
-
-progress { /* remove style default */
-  display:block;
-  -webkit-appearance: none;
-}
-
-progress::-webkit-progress-bar { /* background bar */
-  background: var(--dark-blue);
-  border-radius: 1rem;
-  padding: 0.15rem;
-  height: 0.8rem;
-}
-
-progress::-moz-progress-bar {  /* background bar */
-  background: var(--grayd);
-  border-radius: 1rem;
-  padding: 0.15rem;
-  height: 0.8rem;
-}
-
-progress::-webkit-progress-value { /* fill progress */
-  border-radius: 1rem;
-  background: linear-gradient(to left, var(--blue), var(--green));
-  box-shadow: 0 0 0.4rem #151515; 
-}
-
-progress::after { /* percent text */
-	content: attr(data-content);
-  display: block;
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--grayl);
-  margin: -1.45rem 0 0 10.5rem;
 }
 
 .pcard-buttons-container {

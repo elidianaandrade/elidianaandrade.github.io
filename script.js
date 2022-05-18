@@ -15,6 +15,8 @@ function tabbedSoftskillsActive() {
     softskillsActive.classList.add('active');
     const hardskillsInactive = document.getElementById('tabbed-menu-hardskills');
     hardskillsInactive.classList.remove('active');
+    document.getElementById('softskills-content').style.display = 'block';
+    document.getElementById('hardskills-content').style.display = 'none';
 }
 
 const tabbedSoftskills = document.getElementById('tabbed-menu-softskills');
@@ -27,6 +29,8 @@ function tabbedHardskillsActive() {
     hardskillsActive.classList.add('active');
     const softskillsInactive = document.getElementById('tabbed-menu-softskills');
     softskillsInactive.classList.remove('active');
+    document.getElementById('hardskills-content').style.display = 'block';
+    document.getElementById('softskills-content').style.display = 'none';
 }
 
 const tabbedHardskills = document.getElementById('tabbed-menu-hardskills');
