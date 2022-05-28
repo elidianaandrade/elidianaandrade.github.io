@@ -272,8 +272,8 @@
     }
 
     .intro-content2, .about-content2, .section-education, .contact-content2, .projects-content2 {
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
         margin: 0;
         padding: 0;
     }

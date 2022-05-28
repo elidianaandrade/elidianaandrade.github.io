@@ -596,7 +596,7 @@ input:checked + .slider:before { /* sun icon */
 
 #softskills-list {
   line-height: 2rem;
-  margin: 1rem 0 0 1.5rem;
+  margin: 1rem 0 1.5rem 1.5rem;
 }
 
 #softskills-list li{
