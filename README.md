@@ -17,7 +17,8 @@ Portfolio
 
 ## ⚙ Functionalities
 - [x] Light and dark mode;
-- [x] Menu sidebar.
+- [x] Menu sidebar;
+- [x] Tabbed Menu.
 
 <br>
 
