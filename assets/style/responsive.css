@@ -255,12 +255,12 @@
         padding: 4rem;
     }
 
-    .about-content1, .education-content1, .projects-content1 {
+    .about-content1, .education-content1, .education-content2, .contact-content1, .projects-content1 {
         margin: 0;
         padding: 0;
     }
 
-    .intro-content2, .about-content2, .section-education, .projects-content2 {
+    .intro-content2, .about-content2, .section-education, .contact-content2, .projects-content2 {
         justify-content: center;
         align-items: center;
         margin: 0;
