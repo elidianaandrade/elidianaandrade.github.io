@@ -309,28 +309,28 @@ input:checked + .slider:before { /* sun icon */
 /* SWITCH END */
 
 /* INTRODUCTION STYLE */
-#home {
+
+.section-intro{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  padding: 0 4.5rem;
 }
 
 .intro-content1 {
-  width: 25rem;
-  height: 50rem;
+  width: 30%;
+  height: 60rem;
   background: linear-gradient(rgba(21,21,21,0), rgba(21,21,21,0), rgba(21,21,21) 100%), url('../img/photo-intro.jpg') no-repeat center;
   background-size: cover;
+  margin: 0 4.5rem;
 }
 
 .intro-content2 {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 45.5rem;
-  padding: 3rem 0 4rem 0;
-  margin-left: 4.5rem;
+  width: 60%;
+  margin-right: 4.5rem;
 }
 
 .intro-text-gradient {
@@ -453,15 +453,15 @@ input:checked + .slider:before { /* sun icon */
 /* ABOUT ME STYLE */
 .section-about {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   padding: 6.5rem 0 8rem 8.5rem;
 }
 
 .about-content1 {
   display: flex;
   flex-direction: column;
-  width: 45.5rem;
-  margin-right: 5rem;
+  width: 60%;
+  margin-right: 4.5rem;
 }
 
 .about-content1 .section-paragraph {
@@ -613,11 +613,12 @@ input:checked + .slider:before { /* sun icon */
   flex-direction: column;
   align-items: left;
   justify-content:flex-start;
+  width: 30%;
+  margin-right: 4.5rem;
 }
 
 .about-avatar {
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
   border: 0.1rem solid var(--grayd);
   object-fit: cover;
   margin-bottom: 1rem;
@@ -665,8 +666,8 @@ input:checked + .slider:before { /* sun icon */
 .education-content1 {
   display: flex;
   flex-direction: column;
-  width: 45.5rem;
-  margin-right: 5rem;
+  width: 60%;
+  margin-right: 4.5rem;
 }
 
 #education-timeline {
@@ -749,6 +750,8 @@ input:checked + .slider:before { /* sun icon */
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  width: 30%;
+  margin-right: 4.5rem;
 }
 
 #education-list {
@@ -776,8 +779,8 @@ input:checked + .slider:before { /* sun icon */
 .projects-content1 {
   display: flex;
   flex-direction: column;
-  width: 70.5rem;
-  margin-right: 5rem;
+  width: 100%;
+  margin-right: 4.5rem;
 }
 
 .projects-gallery {
@@ -898,6 +901,7 @@ input:checked + .slider:before { /* sun icon */
   flex-direction: column;
   align-items: center;
   justify-content: right;
+  margin-right: 4.5rem;
 }
 /* PROJECTS END */
 
@@ -913,7 +917,7 @@ input:checked + .slider:before { /* sun icon */
   display: flex;
   flex-direction: column;
   width: 45.5rem;
-  margin-right: 5rem;
+  margin-right: 4.5rem;
 }
 
 #menu-social-contact {
