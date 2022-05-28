@@ -250,6 +250,11 @@
         margin: 3rem 0 4rem 0;
     }
 
+    .intro-content2 {
+        justify-content: center;
+        align-items: center;
+    }
+
     .intro-content2 .intro-title{
         font-size: 2.65rem;
     }
@@ -294,6 +299,10 @@
 
     .tools-list > li{
         gap: 0;
+    }
+
+    .about-avatar {
+        display: none;
     }
     /* ABOUT STYLE END */ 
 
