@@ -1,3 +1,10 @@
+<div align="center">
+  <a href="https://elidianaandrade.github.io/archstil/">
+    <img alt="Screen Portfolio EA" src="https://raw.githubusercontent.com/elidianaandrade/elidianaandrade.github.io/feature-v1/assets/img/projects-covers/cover-screen-portfolio-ea.png">
+  </a>
+</div>
+<br>
+
 # ELIDIANA ANDRADE | Portfolio
 
 ## 👩‍💻 About the project
@@ -9,14 +16,8 @@ Portfolio
 [![JavaScript](https://img.shields.io/badge/JavaScript-000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ## ⚙ Functionalities
-- [ ] A
-- [ ] B
-- [ ] C
-- [ ] D
-
-## 🛠️ Utilities
-- **Icons:** [Font Awesome](https://fontawesome.com/icons)
-- **Favicon:** [Favicon.io](https://favicon.io/)
+- [x] Light and dark mode;
+- [x] Menu sidebar.
 
 <br>
 
