@@ -1,8 +1,13 @@
+@media screen and (max-width: 1366px) {
+    .intro-content1 {
+        height: 45rem;
+    }
+}
+
 @media screen and (max-width: 700px) {
     html, body {
         overflow-x: hidden;
     }
-
 
     .title-header {
         display: flex;

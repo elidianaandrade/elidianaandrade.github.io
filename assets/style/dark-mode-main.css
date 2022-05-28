@@ -618,7 +618,7 @@ input:checked + .slider:before { /* sun icon */
 }
 
 .about-avatar {
-  width: 100%;
+  width: 90%;
   border: 0.1rem solid var(--grayd);
   object-fit: cover;
   margin-bottom: 1rem;
