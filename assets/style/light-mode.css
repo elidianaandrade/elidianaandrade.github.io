@@ -184,9 +184,15 @@ body.light-mode .tabbed-content-title h3 {
     color: transparent; 
 }  
 
-body.light-mode .softskills-items {
-    color: var(--black);
+body.light-mode #softskills-list li{
+    list-style-type: disc;
+    color: var(--primary-color-light);
+  }
+  
+body.light-mode #softskills-list li p{
+    color: var(--grayd)
 }
+
 
 body.light-mode .hobbies-icons {
     color: var(--dark-blue)
@@ -233,7 +239,15 @@ body.light-mode .education-timeline-note i { /* award icon*/
 body.light-mode .education-timeline-note p { /* award text */
     font-weight: 401;
     color: var(--black);
-  }
+}
+
+body.light-mode #education-list li{
+    color: var(--primary-color-light);
+}
+  
+body.light-mode #education-list li p{
+    color: var(--grayd)
+}
 /* EDUCATION ME STYLE END */
 
 
@@ -268,6 +282,17 @@ body.light-mode .pcard-button {
 /* PROJECTS STYLE END */
 
 
+/* CONTACT STYLE */
+body.light-mode .contact-icons {
+    background: linear-gradient(var(--primary-color-light), var(--secondary-color-light));  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+/* CONTACT STYLE END */
+
+
 /* FOOTER STYLE */
 body.light-mode  .up:hover {
     background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light));  
@@ -277,7 +302,7 @@ body.light-mode  .up:hover {
     color: transparent;
 }
 
-body.light-mode div .footer-description {
-    font-weight: 500;
+body.light-mode .footer-description {
+    font-weight: 600;
 }
 /* FOOTER END */
