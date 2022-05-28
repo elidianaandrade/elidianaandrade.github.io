@@ -9,7 +9,7 @@
         overflow-x: hidden;
     }
 
-    .title-header {
+    .header-title {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -23,7 +23,7 @@
         z-index: 3;
     }
 
-    body.light-mode .title-header {
+    body.light-mode .header-title {
         color: var(--dark);
         background: var(--light);
         box-shadow: 0 0 0.3rem var(--grayl); 
@@ -351,7 +351,7 @@
 }
 
 @media screen and (max-width: 330px) {
-    .title-header {
+    .header-title {
         height: 6rem;
         padding: 1rem 4rem 1rem 5rem;
         line-height: 2.1rem;
