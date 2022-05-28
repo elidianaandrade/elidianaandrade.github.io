@@ -8,7 +8,7 @@
 # ELIDIANA ANDRADE | Portfolio
 
 ## 👩‍💻 About the project
-Portfolio
+Portfolio using HTML, CSS3 and pure JavaScript for learning purposes.
 
 ## 💻 Technologies
 [![HTML5](https://img.shields.io/badge/HTML5-000?style=for-the-badge&logo=html5&logoColor=E34F26)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
