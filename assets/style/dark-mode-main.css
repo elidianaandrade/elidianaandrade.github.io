@@ -435,6 +435,7 @@ input:checked + .slider:before { /* sun icon */
   font-family: "Lato", Arial, sans-serif;
   font-size: 1.25rem;
   text-align: justify;
+  margin: 0.25rem 0;
 }
 
 .section-subtitle {
@@ -878,48 +879,6 @@ input:checked + .slider:before { /* sun icon */
 }
 /* PROJECTS END */
 
-/* ONTACT STYLE */
-.section-contact {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 6.5rem 0 8rem 8.5rem;
-}
-
-.contact-content1 {
-  display: flex;
-  flex-direction: column;
-  width: 45.5rem;
-  margin-right: 5rem;
-}
-
-#contact-list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5rem;
-}
-
-.contact-items > a{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: var(--white);
-  margin-bottom: 0.25rem;
-}
-
-.contact-icons {
-  font-size: 1.5rem;
-  background: linear-gradient(var(--primary-color), var(--secondary-color));  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  margin-right: 0.8rem;
-}
-
-.contact-icons > .fa-location-dot {
-  margin-left: 0.25rem;
-}
-/* CONTACT END */
 
 /* FOOTER STYLE */
 .section-footer {

@@ -267,16 +267,6 @@ body.light-mode .pcard-button {
 
 /* PROJECTS STYLE END */
 
-/* CONTACT STYLE */
-body.light-mode .contact-icons {
-    background: linear-gradient(var(--primary-color-light), var(--secondary-color-light));  
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-/* CONTACT STYLE END */
-
 
 /* FOOTER STYLE */
 body.light-mode  .up:hover {

@@ -249,18 +249,18 @@
     /* INTRODUCTION STYLE END */
 
     /* DEFAULT STYLE */ 
-    #home, #about, #education, #projects, #contact, .section-footer  {
+    #home, #about, #education, #projects, .section-footer  {
         width: 100%;
         margin: 0;
         padding: 4rem;
     }
 
-    .about-content1, .education-content1, .projects-content1, .contact-content1 {
+    .about-content1, .education-content1, .projects-content1 {
         margin: 0;
         padding: 0;
     }
 
-    .intro-content2, .about-content2, .section-education, .projects-content2, .contact-content2 {
+    .intro-content2, .about-content2, .section-education, .projects-content2 {
         justify-content: center;
         align-items: center;
         margin: 0;
