@@ -601,7 +601,7 @@ input:checked + .slider:before { /* sun icon */
 
 #softskills-list li{
   list-style-type: disc;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 #softskills-list li p{
@@ -659,7 +659,7 @@ input:checked + .slider:before { /* sun icon */
 /* EDUCATION STYLE */
 .section-education {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   padding: 6.5rem 0 8rem 8.5rem;
 }
 
@@ -761,7 +761,7 @@ input:checked + .slider:before { /* sun icon */
 
 #education-list li{
   list-style-type: disc;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 #education-list li p{

@@ -287,14 +287,14 @@
     .section-title {
         font-size: 2rem;
     }
+
+    .section-about, .section-education {
+        flex-direction: column;
+    }
     /* DEFAULT STYLE END */ 
 
 
     /* ABOUT STYLE */
-    .section-about {
-        flex-direction: column;
-    }
-
     .tools-content {
         display: flex;
         flex-direction: column;
@@ -303,7 +303,7 @@
     } 
 
     .tools-list > li{
-        gap: 0;
+        gap: 0 1rem;
     }
 
     .about-avatar {
