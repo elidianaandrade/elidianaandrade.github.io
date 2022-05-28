@@ -442,7 +442,6 @@ input:checked + .slider:before { /* sun icon */
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
-  line-height: 3rem;
   background: linear-gradient(to left, var(--primary-color), var(--secondary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -493,7 +492,7 @@ input:checked + .slider:before { /* sun icon */
   transition: 0.3s;  
 }
 
-#tabbed-skills-list li.active { /* button hardskills active */
+#tabbed-skills-list li.active { /* button skills active */
   border-bottom: 0.15rem solid;
   border-image: linear-gradient(to left, var(--secondary-color), var(--primary-color)) 1;
   transition: 0.3s;
@@ -937,7 +936,7 @@ input:checked + .slider:before { /* sun icon */
 
 .contact-items > a{
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   color: var(--white);
   margin-bottom: 0.25rem;
@@ -973,7 +972,6 @@ input:checked + .slider:before { /* sun icon */
 .footer-description {
   font-family: "Lato", Arial, sans-serif;
   font-size: 1rem;
-  text-align: center;
 }
 
 .up-container {

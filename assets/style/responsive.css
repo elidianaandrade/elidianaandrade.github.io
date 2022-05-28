@@ -1,12 +1,19 @@
 @media screen and (max-width: 700px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+
     .title-header {
         display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         font-size: 1.6rem;
         font-weight: 600;
         text-transform: uppercase;
         color: var(--light);
         background: var(--dark);
-        padding: 0.75rem 0 0.75rem 3.8rem;
+        padding: 0.75rem;
         box-shadow: 0 0 0.5rem var(--dark-blue); 
         z-index: 3;
     }
@@ -35,7 +42,7 @@
     }
 
     #toggle-button, body.light-mode #toggle-button {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 4rem;
@@ -180,10 +187,10 @@
     flex-direction: row;
     align-items: center;
     padding: 1rem 1.2rem;
-    z-index: 15000;
+    z-index: 3;
     position: absolute;
-    right: 0;
-    margin: 1rem 4.5rem 0 0;
+    left: 0;
+    margin: 0.9rem 4.5rem 0 0;
     }
 
     .switch { /* switch button box */
@@ -243,16 +250,20 @@
         margin: 3rem 0 4rem 0;
     }
 
+    .intro-content2 .intro-title{
+        font-size: 2.65rem;
+    }
+
     .intro-title {
         text-align: center;
     }
     /* INTRODUCTION STYLE END */
 
     /* DEFAULT STYLE */ 
-    #home, #about, #education, #projects, .section-footer  {
+    #home, .intro-content2, #about, #education, #projects, #contact, .contact-content1, .section-footer  {
         width: 100%;
         margin: 0;
-        padding: 4rem;
+        padding: 4rem 2.5rem;
     }
 
     .about-content1, .education-content1, .education-content2, .contact-content1, .projects-content1 {
@@ -266,6 +277,10 @@
         margin: 0;
         padding: 0;
     }
+
+    .section-title {
+        font-size: 2rem;
+    }
     /* DEFAULT STYLE END */ 
 
 
@@ -273,9 +288,20 @@
     .tools-content {
         display: flex;
         flex-direction: column;
+        justify-content: left;
         align-items: left;
     } 
+
+    .tools-list > li{
+        gap: 0;
+    }
     /* ABOUT STYLE END */ 
+
+    /* EDUCATION STYLE */ 
+    #education-timeline ul::before{
+        height: 45%;
+    }
+    /* EDUCATION STYLE END */ 
 
 
     /* PROJECTS STYLE */ 
@@ -292,9 +318,65 @@
         padding: 1rem;
         gap: 0.5rem;
     }
-    /* PROJECTS STYLE END */ 
+    /* PROJECTS STYLE END */
+
+    /* FOOTER STYLE */
+    .up-container{
+       display: none;
+    }
+    /* FOOTER STYLE END */
 }
 
-@media screen and (min-width: 1000px) {
- 
+@media screen and (max-width: 330px) {
+    .title-header {
+        height: 6rem;
+        padding: 1rem 4rem 1rem 5rem;
+        line-height: 2.1rem;
+    }
+    
+    #toggle-button {
+        margin-top: 1rem;
+    }
+
+    .switch-container {
+        margin: 2rem 0;
+    }
+
+    /* ABOUT STYLE */
+    #tabbed-skills-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    #tabbed-skills-list li.active { /* button skills active */
+        background: linear-gradient(to left, var(--primary-color), var(--secondary-color)); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; 
+    }
+
+    #tabbed-skills-list li {
+        padding: 0;
+        margin: 0;
+    }
+
+    .about-avatar {
+        width: 12rem;
+        height: 12rem;
+    }
+    /* ABOUT STYLE END */
+
+
+    /* CONTACT STYLE */
+    .contact-items > a {
+        font-size: 0.85rem;
+    }
+
+    .contact-icons {
+        display: none;
+    }
+    /* CONTACT STYLE END */
 }
