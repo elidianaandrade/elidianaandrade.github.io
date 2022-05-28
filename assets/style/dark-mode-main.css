@@ -319,7 +319,7 @@ input:checked + .slider:before { /* sun icon */
 
 .intro-content1 {
   width: 30%;
-  height: 60rem;
+  height: 61rem;
   background: linear-gradient(rgba(21,21,21,0), rgba(21,21,21,0), rgba(21,21,21) 100%), url('../img/photo-intro.jpg') no-repeat center;
   background-size: cover;
   margin: 0 4.5rem;
