@@ -1,6 +1,6 @@
 /* TOGGLE MENU ACTIVE */
 function toggleMenuActive() {
-    const toggleNav = document.getElementById('toggle-nav');
+    const toggleNav = document.getElementById('toggle-bar');
     toggleNav.classList.toggle('active');
 }
 
