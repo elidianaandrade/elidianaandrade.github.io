@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root{
-  --blue: #00D1FF;
-  --green: #00FFF0;
-  --black: #1B1C1E;
+  --primary-color: #00D1FF;
+  --secondary-color: #00FFF0;
+  --primary-color-light: #fd1d1d;
+  --secondary-color-light: #fcb045;
   --grayd: #3D3D3D;
   --grayl: #CACACA;
-  --white: #FAFAFA;
+  --white: #EAEAEA;
   --light: #F8F9FA;
+  --black: #1B1C1E;
   --dark:  #151515;
   --dark-blue: #212327;
 }
@@ -27,7 +29,7 @@ html {
   list-style: none;
 
   scrollbar-width: thin; /* Firefox */
-  scrollbar-color: var(--dark-blue) var(--grayd); 
+  scrollbar-color: var(--grayd) transparent; 
 }
 
 body {
@@ -40,6 +42,10 @@ a {
   color: var(--grayl);
 }
 
+.title-header {
+  display: none;
+}
+
 /* SCROLLBAR STYLE (Chrome, Edge, Safari Style) */
 body::-webkit-scrollbar {
   width: 0.4rem;
@@ -50,7 +56,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--grayd);
+  background: var(--grayd);
 }
 /* SCROLLBAR END */
 
@@ -65,6 +71,8 @@ body::-webkit-scrollbar-thumb {
 progress { /* remove style default */
   display:block;
   -webkit-appearance: none;
+  border: none;
+  border-radius: 1rem;
 }
 
 progress::-webkit-progress-bar { /* background bar */
@@ -83,8 +91,8 @@ progress::-moz-progress-bar {  /* background bar */
 
 progress::-webkit-progress-value { /* fill progress */
   border-radius: 1rem;
-  background: linear-gradient(to left, var(--blue), var(--green));
-  box-shadow: 0 0 0.4rem #151515; 
+  background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+  box-shadow: 0 0 0.4rem var(--dark); 
 }
 
 progress::after { /* percent text */
@@ -114,7 +122,7 @@ progress::after { /* percent text */
   justify-content: center;
   width: 4.5rem;
   height: 4.5rem;
-  background: linear-gradient(to right, var(--blue), var(--green));
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   border: none;
   cursor: pointer;
   z-index: 10000;
@@ -137,7 +145,7 @@ progress::after { /* percent text */
   border-radius: 1rem;
   width: 2.25rem;
   height: 0.25rem;
-  color: var(--black);
+  color: var(--dark);
 }
 
 #toggle-button-icon::after { /* line end */
@@ -172,7 +180,7 @@ progress::after { /* percent text */
   justify-content: space-between;
 }
 
-#toggle-menu-list {
+#toggle-menu-list { /* menu icons off */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -206,10 +214,16 @@ progress::after { /* percent text */
 
 .toggle-menu-icons:hover{
   -webkit-text-stroke-width: 0.05rem;
-  -webkit-text-stroke-color: var(--green);
+  -webkit-text-stroke-color: var(--secondary-color);
+  color: transparent;
+}
+
+.toggle-menu-icons.active{
+  -webkit-text-stroke-width: 0.05rem;
+  -webkit-text-stroke-color: var(--secondary-color);
   color: transparent;
   border-left: 0.2rem solid;
-  border-image: linear-gradient(to top, var(--green), var(--blue)) 1;
+  border-image: linear-gradient(to top, var(--secondary-color), var(--primary-color)) 1;  
 }
 
 .toggle-menu-text{
@@ -223,7 +237,7 @@ progress::after { /* percent text */
   font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;
-  color: var(--green);
+  color: var(--secondary-color);
 
   visibility: hidden;
   margin: -4.1rem 4.5rem;
@@ -261,8 +275,8 @@ progress::after { /* percent text */
   bottom: 0; 
   left: 0;
   cursor: pointer;
-  background-color: var(--dark-blue);
-  border: 0.06rem solid #151515;
+  background: var(--dark-blue);
+  border: 0.06rem solid var(--dark);
   border-radius: 1rem;
   box-shadow: inset 0 0 0.125rem var(--grayd);
   transition: .4s;
@@ -276,13 +290,13 @@ progress::after { /* percent text */
   left: 0.2rem;
   bottom: 0.2rem;
   border-radius: 1rem;
-  box-shadow: inset 0.8rem -0.5rem 0.3rem -0.5rem var(--blue) /* fill, rotate, fade, fill */ , 
-              inset 0.5rem -0.3rem 0 0.1rem var(--green) /* fill, rotate, fade, right inner curve */; 
+  box-shadow: inset 0.8rem -0.5rem 0.3rem -0.5rem var(--primary-color) /* fill, rotate, fade, fill */ , 
+              inset 0.5rem -0.3rem 0 0.1rem var(--secondary-color) /* fill, rotate, fade, right inner curve */; 
   transition: .4s;
 }
 
 input:checked + .slider { /* light mode */
-  background-color: var(--light);
+  background: var(--light);
   border: 0.02rem solid var(--grayl);
   border-radius: 1rem;
   box-shadow: inset 0 0 0.125rem var(--grayd);
@@ -290,44 +304,52 @@ input:checked + .slider { /* light mode */
 
 input:checked + .slider:before { /* sun icon */
   transform: translateY(-2rem);
-  box-shadow: inset 1rem 1rem 0.4rem -0.5rem var(--blue), 
-              inset 1rem 2rem 0.3rem -0.6rem var(--green);
+  box-shadow: inset 1rem 1rem 0.4rem -0.5rem var(--primary-color-light), 
+              inset 1rem 2rem 0.3rem -0.6rem var(--secondary-color-light);
 }
 /* SWITCH END */
 
 /* INTRODUCTION STYLE */
-.section-intro {
+#home {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: left;
-  padding: 10rem 0 8rem 8.5rem;
+  padding: 0 4.5rem;
 }
 
 .intro-content1 {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin-right: 4rem;
+  width: 25rem;
+  height: 50rem;
+  background: linear-gradient(rgba(21,21,21,0), rgba(21,21,21,0), rgba(21,21,21) 100%), url('../img/photo-intro.jpg') no-repeat center;
+  background-size: cover;
 }
 
-.intro-category {
+.intro-content2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 45.5rem;
+  padding: 3rem 0 4rem 0;
+  margin-left: 4.5rem;
+}
+
+.intro-text-gradient {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
-  background: linear-gradient(to right, var(--blue), var(--green)); 
+  background: linear-gradient(to top, var(--secondary-color), var(--primary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent; 
 }
 
-
 .intro-title {
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 4.2rem;
+  font-size: 4rem;
   font-weight: 700;
   margin: 1rem 0;
   color: var(--white); 
@@ -351,26 +373,26 @@ input:checked + .slider:before { /* sun icon */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
-  background: linear-gradient(to right, var(--blue), var(--green)); 
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent; 
   border: 0.125rem solid;
-  border-image: linear-gradient(to right, var(--blue), var(--green)) 1;
+  border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)) 1;
   padding: 0.7rem 1rem;
   user-select: none;
   transition: .4s;
 }
 
 .button-gradient:hover {
-  background: linear-gradient(to right, var(--green), var(--blue)); 
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent; 
   border: 0.125rem solid;
-  border-image: linear-gradient(to right, var(--green), var(--blue)) 1;
+  border-image: linear-gradient(to right, var(--secondary-color), var(--primary-color)) 1;
   cursor: pointer;
   transition: .4s;
 }
@@ -385,7 +407,7 @@ input:checked + .slider:before { /* sun icon */
 }
 
 .menu-social-items > a:hover {
-  background: linear-gradient(to right, var(--blue), var(--green)); 
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -398,7 +420,7 @@ input:checked + .slider:before { /* sun icon */
 .section-icons {
   font-size: 2rem;
   -webkit-text-stroke-width: 0.05rem;
-  -webkit-text-stroke-color: var(--green);
+  -webkit-text-stroke-color: var(--secondary-color);
   color: transparent; 
 }
 
@@ -421,7 +443,7 @@ input:checked + .slider:before { /* sun icon */
   font-size: 1.35rem;
   font-weight: 700;
   line-height: 3rem;
-  background: linear-gradient(to left, var(--blue), var(--green)); 
+  background: linear-gradient(to left, var(--primary-color), var(--secondary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -439,18 +461,22 @@ input:checked + .slider:before { /* sun icon */
 .about-content1 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 45.5rem;
   margin-right: 5rem;
 }
 
-ul#tabbed-skills-list{ /* menu tabbed list */
+.about-content1 .section-paragraph {
+  margin-bottom: 2rem;
+}
+
+#tabbed-skills-list{ /* menu tabbed list */
 	float: left;
   height: 2.75rem;
 	border-bottom: 0.125rem solid var(--dark-blue);
 	width: 100%;
 }
 
-ul#tabbed-skills-list li{ /* button menu tabbed default */
+#tabbed-skills-list li{ /* button menu tabbed default */
   position: relative;
 	float: left;
   padding: 0.55rem 1rem;
@@ -460,18 +486,21 @@ ul#tabbed-skills-list li{ /* button menu tabbed default */
   cursor: pointer;
 }
 
-ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
+#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   border-bottom: 0.15rem solid;
-  border-image: linear-gradient(to left, var(--green), var(--blue)) 1;
+  border-image: linear-gradient(to left, var(--primary-color), var(--secondary-color)) 1;
   transition: 0.3s;  
 }
 
 #tabbed-skills-list li.active { /* button hardskills active */
-  display: block;
-  background: var(--dark-blue);
   border-bottom: 0.15rem solid;
-  border-image: linear-gradient(to left, var(--green), var(--blue)) 1;
+  border-image: linear-gradient(to left, var(--secondary-color), var(--primary-color)) 1;
   transition: 0.3s;
+}
+
+#tabbed-menu-hardskills, #tabbed-menu-softskills{
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 #tabbed-skills-container {
@@ -479,6 +508,8 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 	float: left;
 	width: 100%;
 	overflow: auto;
+  font-size: 1rem;
+  font-weight: 401;
 }
 
 .tabbed-skills-title, #softskills-content{ 
@@ -495,7 +526,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 
 .tabbed-content-icon{
   font-size: 1.3rem;
-  background: linear-gradient(var(--blue), var(--green));  
+  background: linear-gradient(var(--primary-color), var(--secondary-color));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -513,34 +544,35 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1.15rem;
   font-weight: 500;
-  background: linear-gradient(to right, var(--blue), var(--green)); 
+  background: linear-gradient(to top, var(--secondary-color), var(--primary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent; 
 }
 
-.languages-content, .technologies-content, .softwares-content{
+.languages-content, .tools-content, .softwares-content{
   display: flex;
   flex-flow: row wrap;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1.5rem;
 }
 
-.technologies-content {
+.tools-content {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 4rem;
+  width: 100%;
+  gap: 3rem;
 }
 
-.technologies-list > li {
+.tools-list > li {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  line-height: 2rem;
+  line-height: 1.9rem;
 }
 
 
@@ -553,7 +585,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 
 .softwares-icons {
   font-size: 1rem;
-  background: linear-gradient(var(--blue), var(--green));  
+  background: linear-gradient(var(--primary-color), var(--secondary-color));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -564,8 +596,6 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 }
 
 .softskills-list {
-  font-size: 1.15rem;
-  color: var(--grayl); 
   line-height: 2rem;
   margin: 1rem 0;
 }
@@ -578,12 +608,13 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 }
 
 .about-avatar {
-  width: 17rem;
-  height: 17rem;
-  border-radius: 60%;
+  width: 20rem;
+  height: 20rem;
   border: 0.1rem solid var(--grayd);
   object-fit: cover;
   margin-bottom: 1rem;
+  border-radius: 100%;
+  user-select: none;
 }
 
 .hobbies-list > li > a {
@@ -600,7 +631,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 }
 
 .hobbies-items:hover {
-  background: linear-gradient(to left, var(--blue), var(--green)); 
+  background: linear-gradient(to left, var(--primary-color), var(--secondary-color)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -626,7 +657,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 .education-content1 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 45.5rem;
   margin-right: 5rem;
 }
 
@@ -658,7 +689,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
   height: 1.15rem;
   border: 0.2rem solid var(--dark-blue);
   border-radius: 100%;
-  background: linear-gradient(to left, var(--blue), var(--green));
+  background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
 }
 
 #education-timeline ul {
@@ -695,11 +726,15 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 }
 
 .education-timeline-note i { /* award icon*/
-  background: linear-gradient(var(--blue), var(--green));  
+  background: linear-gradient(var(--primary-color), var(--secondary-color));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;  
+}
+
+.education-timeline-note p { /* award text */
+  color: var(--white);
 }
 
 .education-content2 {
@@ -719,7 +754,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 .projects-content1 {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70.5rem;
   margin-right: 5rem;
 }
 
@@ -731,7 +766,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 
 #projects-list {
   display: grid;
-  grid-template-columns: repeat(3, 32%);
+  grid-template-columns: repeat(3, 33%);
   margin-left: -1rem;
 }
 
@@ -748,8 +783,8 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 }
 
 .projects-card:hover{
-  -webkit-box-shadow: 0 0.5rem 1.5rem rgb(84, 84, 84, 0.6);
-  box-shadow: 0 0.5rem 1.5rem rgb(84, 84, 84, 0.6);
+  -webkit-box-shadow: 0 0.2rem 1rem rgb(40, 40, 40, 0.7);
+  box-shadow: 0 0.15rem 1rem rgb(40, 40, 40, 0.7);
   transition: .4s;
 }
 
@@ -812,7 +847,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 
 .pcard-button {
   font-size: 2rem;
-  background: linear-gradient(var(--blue), var(--green));  
+  background: linear-gradient(var(--primary-color), var(--secondary-color));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -853,7 +888,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 .contact-content1 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 45.5rem;
   margin-right: 5rem;
 }
 
@@ -873,7 +908,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 
 .contact-icons {
   font-size: 1.5rem;
-  background: linear-gradient(var(--blue), var(--green));  
+  background: linear-gradient(var(--primary-color), var(--secondary-color));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -913,7 +948,7 @@ ul#tabbed-skills-list li:hover{ /* button menu tabbed hover */
 
 .up:hover {
   font-size: 2rem;
-  background: linear-gradient(var(--blue), var(--green));  
+  background: linear-gradient(to left, var(--primary-color), var(--secondary-color));  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

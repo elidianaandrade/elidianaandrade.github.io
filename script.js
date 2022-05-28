@@ -9,7 +9,9 @@ const toggleButton = document.getElementById('toggle-button');
 toggleButton.addEventListener('click', toggleMenuActive);
 /* TOGGLE MENU ACTIVE END */
 
-/* TABBED MENU ACTIVE */
+
+
+/* TABBED MENU */
 function tabbedSoftskillsActive() {
     const softskillsActive = document.getElementById('tabbed-menu-softskills');
     softskillsActive.classList.add('active');
@@ -36,7 +38,7 @@ function tabbedHardskillsActive() {
 const tabbedHardskills = document.getElementById('tabbed-menu-hardskills');
 
 tabbedHardskills.addEventListener('click', tabbedHardskillsActive);
-/* TABBED MENU ACTIVE END */
+/* TABBED MENU END */
 
 /* LIGHT MODE */
 function changeMode() {
@@ -45,16 +47,12 @@ function changeMode() {
  
 function changeClasses() {
     body.classList.toggle(lightModeClass);
-    introTitle.classList.toggle(lightModeClass);
-    introDescription.classList.toggle(lightModeClass);
 }
 
 const lightModeClass = 'light-mode';
 const body = document.getElementsByTagName('body')[0];
-const introTitle = document.getElementsByClassName('intro-title')[0];
-const introDescription = document.getElementsByClassName('intro-description')[0];
 
 const lightButton = document.getElementById('mode-selector');
 
 lightButton.addEventListener('click', changeMode);
-/* LIGHT END */
+/* LIGHT MODE END */
