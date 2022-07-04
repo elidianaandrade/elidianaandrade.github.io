@@ -344,9 +344,9 @@ input:checked + .slider:before { /* sun icon */
 }
 
 .intro-content1 {
-  width: 30%;
+  width: 0;
   height: 100%;
-  background: linear-gradient(rgba(21,21,21,0), rgba(21,21,21,0), rgba(21,21,21) 100%), url('../img/photo-intro.jpg') no-repeat center;
+  background: linear-gradient(rgba(21,21,21,0), rgba(21,21,21,0), rgba(21,21,21) 100%), url('') no-repeat center;
   background-size: cover;
   margin: 0 4.5rem;
 }
@@ -354,7 +354,7 @@ input:checked + .slider:before { /* sun icon */
 .intro-content2 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 55%;
   margin-right: 4.5rem;
 }
 

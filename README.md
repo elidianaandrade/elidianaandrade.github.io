@@ -18,7 +18,8 @@ Portfolio using HTML, CSS3 and pure JavaScript for learning purposes.
 ## ⚙ Functionalities
 - [x] Light and dark mode;
 - [x] Menu sidebar;
-- [x] Tabbed Menu.
+- [x] Tabbed Menu;
+- [x] Carousel.
 
 <br>
 
