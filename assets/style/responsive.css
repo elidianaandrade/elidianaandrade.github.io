@@ -1,7 +1,54 @@
-@media screen and (max-width: 1366px) {
-    .intro-content1 {
-        height: 50rem;
+@media screen and (max-width: 1024px) {
+    /* PROJECTS STYLE */ 
+    .projects-gallery {
+        overflow: hidden;
+        width: 70vw;
+        margin: 2rem 0 2rem -2rem;
     }
+
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin: 1rem 2rem;
+        width: 480vw;
+    }
+    
+    .slide {
+        width: 65vw;
+        margin: 0;
+        transition: .5s;
+        margin-right: 2rem;
+    }
+    
+    #slide1:checked ~ .s1 {
+        margin-left: 0;
+    }
+    
+    #slide2:checked ~ .s1{
+        margin-left: -69vw;
+    }
+    
+    #slide3:checked ~ .s1{
+        margin-left: -138vw;
+    }
+
+    .bar.mobile{
+        display: block;
+    }
+
+    #slide4:checked ~ .s1{
+        margin-left: -207vw;
+    }
+
+    #slide5:checked ~ .s1{
+        margin-left: -276vw;
+    }
+
+    #slide6:checked ~ .s1{
+        margin-left: -345vw;
+    }
+    /* PROJECTS STYLE END */
 }
 
 @media screen and (max-width: 700px) {
@@ -30,6 +77,10 @@
     }
 
     /* TOGGLE MENU STYLE */
+    #logo {
+        display: none;
+    }
+    
     #toggle-bar {
         display: flex;
         flex-direction: column;
@@ -39,11 +90,25 @@
         position: fixed;
         margin: 0;
         background: var(--dark);
-        z-index: 2;
+        z-index: 100;
+        user-select: none;
     }
 
     body.light-mode #toggle-bar {
         background: var(--light);
+    }
+
+    #toggle-button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        border: none;
+        cursor: pointer;
+        z-index: 3;
+        transition: 1s;
     }
 
     #toggle-button, body.light-mode #toggle-button {
@@ -102,14 +167,15 @@
 
     #toggle-nav {
         display: none;
+        width: 100%;
     }
 
     #toggle-bar.active #toggle-nav{
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: column;
         align-items: center;
-        justify-content: left;
-        z-index: 2;
+        justify-content: center;
+        z-index: 1;
         background: var(--dark);
         animation: down-menu 1s;
     }
@@ -135,55 +201,54 @@
     #toggle-menu-list {
         display: flex;
         flex-direction: column;
-        justify-content: left;
-        margin: 1rem 0 0 -2rem;
+        justify-content: center;
+        margin: auto;
         z-index: 1;
+    } 
+
+    .toggle-menu-items a{
+        width: 100%; 
+    } 
+
+    .toggle-menu-icons{
+       display: none;
     }
 
-    #toggle-menu-list li {
-        margin-top: 1rem;
-    }
-
-    .toggle-menu-icons i{
+    .toggle-menu-text {
         display: none;
-    }
-
-    .toggle-menu-text{
-        display: none;
+        position: relative;
+        width: 100%;
         background: transparent; 
         letter-spacing: 0.125rem;
         text-transform: uppercase;
         font-size: 0.9rem;
         white-space: nowrap;
         color: var(--white);
+        box-shadow: none;
+        margin: 0.1rem 0 0.2rem 3.65rem;
     }
-
-
-    .toggle-menu-text:hover{
-        background: linear-gradient(to left, var(--primary-color), var(--secondary-color)); 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent; 
-    } 
 
     #toggle-bar.active .toggle-menu-text{
-    display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
     }
+
+
+    .toggle-menu-items.active .toggle-menu-text, .toggle-menu-text:hover{
+        color: var(--primary-color); 
+    } 
+
+    .toggle-menu-text::before{ /* triangle tag menu */
+        display: none;
+    }
+
 
     body.light-mode .toggle-menu-text {
         background: transparent; 
         color: var(--black);
     }
-
-    body.light-mode .toggle-menu-text:hover{
-        background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light)); 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent; 
-    } 
-
     /* TOGGLE MENU END */
 
     /* SWITCH STYLE */
@@ -238,8 +303,8 @@
 
     input:checked + .slider:before { /* sun icon */
     transform: translateX(0rem);
-    box-shadow: inset 0.5rem 1rem 0.4rem -0.5rem var(--primary-color-light), 
-                inset 1rem 2rem 0.3rem -0.6rem var(--secondary-color-light);
+    box-shadow: inset 0.5rem 1rem 0.4rem -0.5rem var(--primary-color), 
+                inset 1rem 2rem 0.3rem -0.6rem var(--secondary-color);
     }
     /* SWITCH END */
 
@@ -247,17 +312,19 @@
     .section-intro {
         display: flex;
         flex-flow: row wrap;
+        height: 100%;
     }
     .intro-content1 {
-        width: 100%;
-        height: 30rem;
-        align-items: center;
+        width: 0%;
         margin: 3rem 0 4rem 0;
     }
 
     .intro-content2 {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 4rem !important;
     }
 
     .intro-content2 .intro-title{
@@ -328,18 +395,53 @@
 
 
     /* PROJECTS STYLE */ 
-    #projects-list {
-        display: flex;
-        flex-direction: column;
-        margin-left: -1rem;
+    .projects-gallery {
+        overflow: hidden;
+        width: 88vw;
+        margin: 2rem 0 0 -2rem;
     }
 
-    .pcard-footer {
-        flex-flow: row wrap;
-        align-items:center;
-        justify-content: space-around;
-        padding: 1rem;
-        gap: 0.5rem;
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin: 1rem 2rem;
+        width: 480vw;
+    }
+      
+    .slide {
+        width: 80vw;
+        margin: 0;
+        margin-left: 0.5rem;
+        transition: .5s;
+    }
+      
+    #slide1:checked ~ .s1 {
+        margin-left: 0;
+    }
+      
+    #slide2:checked ~ .s1{
+        margin-left: -80vw;
+    }
+      
+    #slide3:checked ~ .s1{
+        margin-left: -162vw;
+    }
+
+    .bar.mobile{
+        display: block;
+    }
+
+    #slide4:checked ~ .s1{
+        margin-left: -244vw;
+    }
+
+    #slide5:checked ~ .s1{
+        margin-left: -326vw;
+    }
+
+    #slide6:checked ~ .s1{
+        margin-left: -408vw;
     }
     /* PROJECTS STYLE END */
 
