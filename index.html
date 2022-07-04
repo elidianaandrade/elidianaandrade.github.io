@@ -15,13 +15,18 @@
 <body> 
   <header id="header">
     <div id="toggle-bar">
+      <a href="#home">
+        <div id="logo">
+          <img src="assets/img/ea-logo.png" alt="Logo EA">
+        </div>
+      </a>
       <span class="header-title">Elidiana Andrade</span>
       <button id="toggle-button">
         <span id="toggle-button-icon"></span>
       </button>
       <nav id="toggle-nav">
         <ul id="toggle-menu-list">
-          <li class="toggle-menu-items">
+          <li class="toggle-menu-items active">
             <a href="#home">
               <div class="toggle-menu-icons">
                 <i class="fa-solid fa-house"></i>
@@ -45,7 +50,7 @@
               <div class="toggle-menu-text">Education</div>
             </a>
           </li>
-          <li>
+          <li class="toggle-menu-items">
             <a href="#projects">
               <div class="toggle-menu-icons">
                 <i class="fa-solid fa-rocket"></i>
@@ -53,7 +58,7 @@
               <div class="toggle-menu-text">Projects</div>
             </a>
           </li>
-          <li>
+          <li class="toggle-menu-items">
             <a href="#contact">
               <div class="toggle-menu-icons">
                 <i class="fa-solid fa-envelope"></i>
@@ -89,6 +94,11 @@
               </a>
             </li>
             <li class="menu-social-items">
+              <a href="https://twitter.com/elidianaandrade" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="menu-social-items">
               <a href="https://github.com/elidianaandrade" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
@@ -99,13 +109,8 @@
               </a>
             </li>
             <li class="menu-social-items">
-              <a href="https://twitter.com/elidianaandrade" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-            </li>
-            <li class="menu-social-items">
-              <a href="https://www.instagram.com/elidianaandrade/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
+              <a href="https://dev.to/elidianaandrade" target="_blank">
+                <i class="fa-brands fa-dev"></i>
               </a>
             </li>
             <li class="menu-social-items">
@@ -117,7 +122,7 @@
         </nav>
         <div class="intro-buttons-container">
           <a href="#projects">
-            <button class="button-gradient">
+            <button class="btn-primary">
               View Portfolio
               <i class="fa-solid fa-arrow-down"></i>
             </button>
@@ -378,9 +383,18 @@
       <p class="section-paragraph">
         See the repositories of my projects on <a href="https://github.com/elidianaandrade" target="_blank">GitHub</a>.
       </p>
+
+
       <div class="projects-gallery">
-        <ul id="projects-list">  
-          <li class="projectsl1">
+        <div class="carousel">
+          <input type="radio" name="radio" id="slide1"> 
+          <input type="radio" name="radio" id="slide2"> 
+          <input type="radio" name="radio" id="slide3"> 
+          <input class="mobile" type="radio" name="radio" id="slide4"> 
+          <input class="mobile" type="radio" name="radio" id="slide5"> 
+          <input class="mobile" type="radio" name="radio" id="slide6"> 
+
+          <div class="slide s1">
             <div class ="projects-card">
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" alt="Cover Project Eli Cosmaker" src="assets/img/projects-covers/cover-screen-elicosmaker.png">
@@ -393,12 +407,12 @@
                 <div class="pcard-tags-container">
                   <div class="pcard-tags">HTML5</div>
                   <div class="pcard-tags">CSS3</div>
-                  <div class="pcard-tags">Bootstrap</div>
+                  <div class="pcard-tags">Bootstrap5</div>
                 </div>
               </div>
               <div class="pcard-footer">
                 <div class="progress-container">
-                  <progress value="45" max="100" data-content=""></progress>
+                  <progress value="80" max="100" data-content=""></progress>
                 </div>
                 <div class="pcard-buttons-container">
                   <div class="pcard-button" >
@@ -412,9 +426,11 @@
                     </a>
                   </div>
                 </div>
-              </div>   
-          </li>
-           <li class="projectsl1">
+              </div> 
+            </div>
+          </div>
+
+          <div class="slide s2">
             <div class ="projects-card">
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" alt="Cover Project ArchStil" src="assets/img/projects-covers/cover-screen-archstil.png">
@@ -447,8 +463,10 @@
                   </div>
                 </div>
               </div>
-          </li>         
-          <li class="projectsl1">
+            </div>
+          </div>
+
+          <div class="slide s3">
             <div class ="projects-card">
               <div class ="pcard-cover">
                 <img class="pcard-cover-img" alt="Cover Project Dashboar COVID-19" src="assets/img/projects-covers/cover-screen-dashboard-covid19.jpg">
@@ -481,15 +499,129 @@
                   </div>
                 </div>
               </div>
-          </li>                              
-        </ul>
+            </div>
+          </div>
+
+          <div class="slide s4">
+            <div class ="projects-card">
+              <div class ="pcard-cover">
+                <img class="pcard-cover-img" alt="Cover Project Instagram Clone" src="assets/img/projects-covers/cover-screen-instagram-clone.png">
+              </div>
+              <div class ="pcard-description">
+                <h3 class="section-subtitle">INSTAGRAM CLONE</h3>
+                <p class="section-paragraph">
+                  Instagram login interface clone.
+                </p>
+                <div class="pcard-tags-container">
+                  <div class="pcard-tags">HTML5</div>
+                  <div class="pcard-tags">CSS3</div>
+                </div>
+              </div>
+              <div class="pcard-footer">
+                <div class="progress-container">
+                  <progress value="100" max="100" data-content=""></progress>
+                </div>
+                <div class="pcard-buttons-container">
+                  <div class="pcard-button" >
+                    <a href="https://github.com/elidianaandrade/dio-desafio-instagram" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                  <div class="pcard-button" >
+                    <a href="https://dio-desafio-instagram.netlify.app/" target="_blank">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide s5">
+            <div class ="projects-card">
+              <div class ="pcard-cover">
+                <img class="pcard-cover-img" alt="Cover Project To-do List" src="assets/img/projects-covers/cover-screen-to-do-list.png">
+              </div>
+              <div class ="pcard-description">
+                <h3 class="section-subtitle">TO-DO LIST</h3>
+                <p class="section-paragraph">
+                  To-do list with button to be able to delete the task added to the list.
+                </p>
+                <div class="pcard-tags-container">
+                  <div class="pcard-tags">HTML5</div>
+                  <div class="pcard-tags">CSS3</div>
+                  <div class="pcard-tags">JavaScript</div>
+                </div>
+              </div>
+              <div class="pcard-footer">
+                <div class="progress-container">
+                  <progress value="100" max="100" data-content=""></progress>
+                </div>
+                <div class="pcard-buttons-container">
+                  <div class="pcard-button" >
+                    <a href="https://github.com/elidianaandrade/small-projects/tree/main/to-do%20list" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                  <div class="pcard-button" >
+                    <a href="https://github.com/elidianaandrade/small-projects/blob/main/to-do%20list/assets/img/to-do-list-screen.gif" target="_blank">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide s6">
+            <div class ="projects-card">
+              <div class ="pcard-cover">
+                <img class="pcard-cover-img" alt="Cover Project Counter" src="assets/img/projects-covers/cover-screen-counter.png">
+              </div>
+              <div class ="pcard-description">
+                <h3 class="section-subtitle">COUNTER</h3>
+                <p class="section-paragraph">
+                  A simple counter with negative numbers in red.
+                </p>
+                <div class="pcard-tags-container">
+                  <div class="pcard-tags">HTML5</div>
+                  <div class="pcard-tags">CSS3</div>
+                  <div class="pcard-tags">JavaScript</div>
+                </div>
+              </div>
+              <div class="pcard-footer">
+                <div class="progress-container">
+                  <progress value="100" max="100" data-content=""></progress>
+                </div>
+                <div class="pcard-buttons-container">
+                  <div class="pcard-button" >
+                    <a href="https://github.com/elidianaandrade/small-projects/tree/main/counter" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                  <div class="pcard-button" >
+                    <a href="https://github.com/elidianaandrade/small-projects/blob/main/counter/assets/img/counter-screen.gif" target="_blank">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        <div class="navigation">
+          <label class="bar active" for="slide1"></label>
+          <label class="bar" for="slide2"></label>
+          <label class="bar" for="slide3"></label>
+          <label class="bar mobile" for="slide4"></label>
+          <label class="bar mobile" for="slide5"></label>
+          <label class="bar mobile" for="slide6"></label>
+
+        </div>
       </div>
-      <div class="projects-footer">
-      </div>  
-    </div>
-    <div class="projects-content2">
-    </div>
   </section>
+  
   <section id="contact" class="section-contact">
     <div class="contact-content1">
       <div class="section-icons">
@@ -525,6 +657,11 @@
           </a>
         </li>
         <li>
+          <a href="https://dev.to/elidianaandrade" target="_blank">
+            <i class="fa-brands fa-dev"></i>
+          </a>
+        </li>
+        <li>
           <a href="https://www.linkedin.com/in/elidianaandrade/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
           </a>
@@ -540,13 +677,13 @@
     </div>
     <div class="up-container">
       <a href="#top">
-        <div class="up">
+        <div id="btnUp">
           <i class="fa-solid fa-angle-up"></i>
         </div>
       </a>
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/cd836c1c7b.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>

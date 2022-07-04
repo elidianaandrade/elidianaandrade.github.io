@@ -9,7 +9,31 @@ const toggleButton = document.getElementById('toggle-button');
 toggleButton.addEventListener('click', toggleMenuActive);
 /* TOGGLE MENU ACTIVE END */
 
+/* MENU ITEMS ACTIVE */
+const menuItems = document.querySelectorAll('.toggle-menu-items');
 
+menuItems.forEach(item => {
+  item.addEventListener("click", function() {   
+    menuItems.forEach(a=>{
+      a.classList.remove("active");
+    });
+     item.classList.add("active");    
+  });  
+});
+/* MENU ITEMS ACTIVE END */
+
+/* UP BUTTON */
+function viewBtnUp () {
+  let btnUp = document.getElementById('btnUp'); 
+  if (window.scrollY > 200) {
+      document.getElementById('btnUp').style.display = 'block';
+  }   else {
+    document.getElementById('btnUp').style.display = 'none';
+  }
+}
+
+window.addEventListener('scroll', viewBtnUp);
+/* CHANGE BACKGROUND NAVBAR END */
 
 /* TABBED MENU */
 function tabbedSoftskillsActive() {
@@ -39,6 +63,19 @@ const tabbedHardskills = document.getElementById('tabbed-menu-hardskills');
 
 tabbedHardskills.addEventListener('click', tabbedHardskillsActive);
 /* TABBED MENU END */
+
+/* CAROUSEL NAVIGATION ACTIVE */
+const btnsCarousel = document.querySelectorAll('.bar');
+
+btnsCarousel.forEach(item => {
+  item.addEventListener("click", function() {   
+    btnsCarousel.forEach(a=>{
+      a.classList.remove("active");
+    });
+     item.classList.add("active");    
+  });  
+});
+/* CAROUSEL NAVIGATION ACTIVE END */
 
 /* LIGHT MODE */
 function changeMode() {

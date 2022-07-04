@@ -29,7 +29,7 @@ body.light-mode progress::-webkit-progress-bar { /* background bar */
 }
 
 body.light-mode progress::-webkit-progress-value { /* fill progress */
-    background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light));
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
     box-shadow: 0 0 0.4rem var(--grayl); 
 }
 
@@ -38,45 +38,9 @@ body.light-mode progress::after { /* percent text */
 }
 /* PROGRESS STYLE END */
 
-
-/* TOGGLE MENU STYLE */
-body.light-mode #toggle-button {
-    background: linear-gradient(to right, var(--primary-color-light), var(--secondary-color-light));
-}
-
-body.light-mode #toggle-button-icon { /* line center */
-    color: var(--light);
-}
-
-body.light-mode .toggle-menu-icons {
-    -webkit-text-stroke-width: 0.08rem;
-    -webkit-text-stroke-color: var(--grayd);
-    color: transparent;
-}
-
-body.light-mode .toggle-menu-icons:hover{
-    -webkit-text-stroke-color: var(--primary-color-light);
-}
-
-body.light-mode .toggle-menu-icons.active {
-    -webkit-text-stroke-color: var(--primary-color-light);
-    border-image: linear-gradient(to top, var(--secondary-color-light), var(--primary-color-light)) 1;  
-}
-
-body.light-mode .toggle-menu-text{
-    background: var(--light); 
-    color: var(--primary-color-light);
-}
-/* TOGGLE MENU END */
-
-
 /* INTRODUCTION STYLE */
-body.light-mode .intro-content1, body.light-mode .about-avatar{
-    filter: saturate(120%)
-}
-
 body.light-mode .intro-text-gradient {
-    background: linear-gradient(to top, var(--secondary-color-light), var(--primary-color-light)); 
+    background: linear-gradient(to top, var(--secondary-color), var(--primary-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -96,25 +60,25 @@ body.light-mode #home i {
 }
 
 body.light-mode .button-gradient {
-    background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light)); 
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent; 
-    border-image: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light)) 1;
+    border-image: linear-gradient(to left, var(--secondary-color), var(--primary-color)) 1;
 }
   
 body.light-mode .button-gradient:hover {
-    background: linear-gradient(to left, var(--primary-color-light), var(--secondary-color-light)); 
+    background: linear-gradient(to left, var(--primary-color), var(--secondary-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent; 
-    border-image: linear-gradient(to left, var(--primary-color-light), var(--secondary-color-light)) 1;
+    border-image: linear-gradient(to left, var(--primary-color), var(--secondary-color)) 1;
 }
 
 body.light-mode .menu-social-items > a:hover {
-    background: linear-gradient(to right, var(--primary-color-light), var(--secondary-color-light)); 
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -126,7 +90,7 @@ body.light-mode .menu-social-items > a:hover {
 /* SECTION DEFAULT STYLE */
 body.light-mode .section-icons {
     -webkit-text-stroke-width: 0.09rem;
-    -webkit-text-stroke-color: var(--primary-color-light);
+    -webkit-text-stroke-color: var(--primary-color);
     color: transparent; 
 }
   
@@ -135,7 +99,7 @@ body.light-mode  .section-title {
 }
   
 body.light-mode .section-subtitle {
-    background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light)); 
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -159,17 +123,17 @@ body.light-mode #tabbed-skills-list{ /* menu tabbed list */
 }
 
 body.light-mode #tabbed-skills-list li:hover{ /* button menu tabbed hover */
-    border-image: linear-gradient(to left, var(--primary-color-light), var(--secondary-color-light)) 1;
+    border-image: linear-gradient(to left, var(--primary-color), var(--secondary-color)) 1;
 }
 
 body.light-mode #tabbed-skills-list li.active { /* button hardskills active */
     border-bottom: 0.15rem solid;
-    border-image: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light)) 1;
+    border-image: linear-gradient(to left, var(--secondary-color), var(--primary-color)) 1;
     transition: 0.3s;
 }
 
 body.light-mode .tabbed-content-icon{
-    background: linear-gradient(var(--primary-color-light), var(--secondary-color-light));  
+    background: linear-gradient(var(--primary-color), var(--secondary-color));  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -177,16 +141,13 @@ body.light-mode .tabbed-content-icon{
 }
 
 body.light-mode .tabbed-content-title h3 { 
-    background: linear-gradient(to top, var(--secondary-color-light), var(--primary-color-light)); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent; 
+    color: var(--black); 
+    font-weight: 500;
 }  
 
 body.light-mode #softskills-list li{
     list-style-type: disc;
-    color: var(--primary-color-light);
+    color: var(--primary-color);
   }
   
 body.light-mode #softskills-list li p{
@@ -199,7 +160,7 @@ body.light-mode .hobbies-icons {
 }
 
 body.light-mode .hobbies-items:hover {
-    background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light)); 
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -221,7 +182,7 @@ body.light-mode #education-timeline::before{  /* circle unchecked  */
 body.light-mode #education-timeline::after{  /* circle checked */
     height: 1.15rem;
     border: 0.2rem solid var(--grayl);
-    background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light));
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
 }
 
 body.light-mode #education-timeline ul::before {  /* line */
@@ -229,7 +190,7 @@ body.light-mode #education-timeline ul::before {  /* line */
 }
 
 body.light-mode .education-timeline-note i { /* award icon*/
-    background: linear-gradient(var(--primary-color-light), var(--primary-color-light));  
+    background: linear-gradient(var(--primary-color), var(--primary-color));  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -242,7 +203,7 @@ body.light-mode .education-timeline-note p { /* award text */
 }
 
 body.light-mode #education-list li{
-    color: var(--primary-color-light);
+    color: var(--primary-color);
 }
   
 body.light-mode #education-list li p{
@@ -252,6 +213,10 @@ body.light-mode #education-list li p{
 
 
 /* PROJECTS STYLE */
+body.light-mode .bar {
+    border: 0.125rem solid var(--grayl);
+}
+
 body.light-mode .projects-card {
     border: 0.1rem solid var(--grayl)
 }
@@ -272,7 +237,7 @@ body.light-mode .pcard-footer{
 }
 
 body.light-mode .pcard-button {
-    background: linear-gradient(var(--primary-color-light), var(--secondary-color-light));  
+    background: linear-gradient(var(--primary-color), var(--secondary-color));  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -284,7 +249,7 @@ body.light-mode .pcard-button {
 
 /* CONTACT STYLE */
 body.light-mode .contact-icons {
-    background: linear-gradient(var(--primary-color-light), var(--secondary-color-light));  
+    background: linear-gradient(var(--primary-color), var(--secondary-color));  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -295,7 +260,7 @@ body.light-mode .contact-icons {
 
 /* FOOTER STYLE */
 body.light-mode  .up:hover {
-    background: linear-gradient(to left, var(--secondary-color-light), var(--primary-color-light));  
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color));  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
